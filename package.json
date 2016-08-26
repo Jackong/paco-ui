@@ -1,6 +1,6 @@
 {
   "name": "paco-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "PACO UI",
   "repository": {
     "type": "git",
@@ -9,6 +9,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gulp clean && gulp build",
+    "prepublish": "npm build",
     "watch": "gulp watch"
   },
   "devDependencies": {
@@ -32,7 +33,7 @@
     "stylelint-config-standard": "^12.0.0"
   },
   "dependencies": {},
-  "main": "lib/paco.css",
+  "main": "css/paco.css",
   "engines": {
     "npm": "^3.0.0"
   }
