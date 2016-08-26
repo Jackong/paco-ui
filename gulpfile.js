@@ -3,6 +3,7 @@ const del = require('del');
 const postcss = require('gulp-postcss');
 const sourcemaps = require('gulp-sourcemaps');
 const rename = require('gulp-rename');
+const page = require('gulp-gh-pages');
 
 const pkg = require('./package.json');
 const version = pkg.version;
@@ -49,3 +50,8 @@ gulp.task('watch', ['postcss'], () => {
 });
 
 gulp.task('build', ['postcss']);
+
+gulp.task('deploy', () => {
+  return gulp.src('src/font/**/*')
+  .pipe(page());
+});

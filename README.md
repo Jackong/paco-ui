@@ -4,7 +4,8 @@
 
 ## UI预览
 
-[UI预览](https://jackong.github.io/react-paco-ui)
+[组件预览](https://jackong.github.io/react-paco-ui)
+[图标预览](https://jackong.github.io/paco-ui)
 
 ## 功能特性
 
