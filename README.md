@@ -4,7 +4,7 @@
 
 ## UI预览
 
-![qrcode](http://hcz.pingan.com/common/images/paco-ui.png?v=2)
+[UI预览](https://jackong.github.io/react-paco-ui)
 
 ## 功能特性
 
@@ -15,10 +15,20 @@
 
 ### 用法
 
-- 引入CSS
+- 方法一：引入CSS
 
 ```html
-<link rel="stylesheet" href="//o9s0jh825.qnssl.com/common/css/paco/VERSION/paco.min.css" charset="utf-8">
+<link rel="stylesheet" href="//o9s0jh825.qnssl.com/paco/css/paco-VERSION.min.css" charset="utf-8">
+```
+
+- 方法二：NPM
+
+```bash
+npm i --save paco-ui
+```
+
+```js
+import 'paco-ui';
 ```
 
 ### 框架版
