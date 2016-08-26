@@ -1,0 +1,74 @@
+@import "_common.css";
+
+$fs: $text-4;
+
+.agree-it {
+  @mixin font-size $fs;
+
+  vertical-align: middle;
+  display: inline-block;
+
+  & > a {
+    color: $linkColor;
+    text-decoration: none;
+  }
+}
+
+.agreement {
+  @mixin font-size $fs;
+
+  background-color: #f1f1f4;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 89.33%;
+  padding-left: 5.33%;
+  padding-right: @padding-left;
+  overflow: hidden;
+
+  & > * {
+    margin: 0;
+  }
+
+  & > .title {
+    color: $titleColor;
+    font-size: em(16, $fs);
+    margin-left: em(-20, $fs);
+    text-align: center;
+    margin-top: em(25, $fs);
+    font-weight: bolder;
+  }
+
+  & > .welcome,
+  & > .foreword,
+  & > p {
+    font-size: 1em;
+    color: $textColor;
+    margin-top: em(10, $fs);
+    line-height: 1.25;
+  }
+
+  & > .sub-title {
+    font-size: 1em;
+    color: $titleColor;
+    margin-top: em(15, $fs);
+    font-weight: 200;
+  }
+
+  & > .welcome {
+    margin-top: em(22, $fs);
+  }
+
+  & > .foreword {
+    margin-top: em(15, $fs);
+  }
+}
+
+.navbar-wrapper ~ .agreement,
+.navbar-wrapper ~ * .agreement {
+  top: em($navbar-height, $fs);
+}

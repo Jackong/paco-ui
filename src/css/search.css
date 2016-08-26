@@ -1,0 +1,140 @@
+@import "_common.css";
+
+$fs: $text-4;
+
+.search-wrapper {
+  @mixin font-size $fs;
+
+  width: 100%;
+  height: 43px;
+  display: block;
+  position: relative;
+
+  & .paco {
+    font-size: 1em;
+    color: $tipsColor;
+    width: 1em;
+    height: @width;
+    line-height: @height;
+  }
+
+  & > .search {
+    height: 43px;
+    line-height: @height;
+    background-color: #e6e7e9;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    z-index: 999999;
+    width: 100%;
+    text-align: center;
+
+    & > .input {
+      font-size: 1em;
+      margin: 7px 2.666%;
+      height: 29px;
+      line-height: @height;
+      position: relative;
+
+      & > input {
+        font-size: 1em;
+        width: 100%;
+        height: 100%;
+        display: block;
+        outline: none;
+        border-width: 0;
+        padding: 0;
+        line-height: 1.5;
+        border-radius: 6px;
+        -webkit-appearance: none;
+
+        &:focus,
+        &:valid {
+          padding-left: 7.2%;
+
+          & ~ .placeholder {
+            left: em(5, $fs);
+            right: inherit;
+          }
+        }
+
+        &:valid {
+          & ~ .placeholder > .text {
+            display: none;
+          }
+
+          & ~ .clear {
+            display: inline;
+          }
+        }
+
+        color: $linkColor;
+        text-shadow: 0 0 0 $titleColor;
+        -webkit-text-fill-color: transparent;
+
+        &::-webkit-input-placeholder {
+          color: $tipsColor;
+          text-shadow: none;
+          -webkit-text-fill-color: initial;
+        }
+      }
+
+      & > .placeholder {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        color: $tipsColor;
+        font-size: 1em;
+
+        & > .text {
+          margin-left: em(7.5, $fs);
+        }
+      }
+
+      & > .clear {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: none;
+        cursor: pointer;
+        padding: em(7.5, $fs);
+      }
+    }
+
+    & > .cancel {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      font-size: em(16, $fs);
+      color: $linkColor;
+      display: none;
+      padding-left: 2.666%;
+      padding-right: @padding-left;
+    }
+  }
+
+  &.focus > .search {
+    top: 0;
+
+    & > .input {
+      margin-right: 14.133%;
+    }
+
+    & > .cancel {
+      display: inline;
+    }
+  }
+}
+
+.navbar-wrapper ~ * .search {
+  top: em($navbar-height, $fs);
+}

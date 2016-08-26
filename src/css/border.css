@@ -1,0 +1,41 @@
+@import "_common.css";
+
+.border {
+  @mixin border;
+}
+
+.border-hide {
+  @mixin border 0;
+}
+
+.border-top {
+  @mixin border-top;
+}
+
+.border-top-hide {
+  @mixin border-top 0;
+}
+
+.border-bottom {
+  @mixin border-bottom;
+}
+
+.border-bottom-hide {
+  @mixin border-bottom 0;
+}
+
+.border-left {
+  @mixin border-left;
+}
+
+.border-left-hide {
+  @mixin border-left 0;
+}
+
+.border-right {
+  @mixin border-right;
+}
+
+.border-right-hide {
+  @mixin border-right 0;
+}
