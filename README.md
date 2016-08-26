@@ -18,7 +18,7 @@
 - 方法一：引入CSS
 
 ```html
-<link rel="stylesheet" href="//o9s0jh825.qnssl.com/paco/css/paco-VERSION.min.css" charset="utf-8">
+<link rel="stylesheet" href="//o9s0jh825.qnssl.com/paco-ui/VERSION/paco-ui.min.css" charset="utf-8">
 ```
 
 - 方法二：NPM

@@ -9,6 +9,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gulp clean && gulp build",
+    "rename": "gulp rename",
     "prepublish": "npm build",
     "watch": "gulp watch"
   },
@@ -33,7 +34,7 @@
     "stylelint-config-standard": "^12.0.0"
   },
   "dependencies": {},
-  "main": "css/paco.css",
+  "main": "css/paco-ui.css",
   "engines": {
     "npm": "^3.0.0"
   }
