@@ -1,0 +1,46 @@
+@import "_common.css";
+
+$fs: $text-4;
+
+.checkbox {
+  @mixin font-size $fs;
+
+  color: $titleColor;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+
+  & > input[type=checkbox] {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    opacity: 0;
+    padding: em(10, $fs);
+
+    &,
+    & + .paco {
+      font-size: em(18, $fs);
+      width: 1em;
+      height: @width;
+      line-height: 1;
+      color: $tipsColor;
+      cursor: pointer;
+      vertical-align: middle;
+      margin-right: em(4, $fs);
+    }
+
+    & + .paco::before {
+      content: "\e600";
+    }
+
+    &:checked + .paco {
+      color: $primaryColor;
+    }
+
+    &:checked + .paco::before {
+      content: "\e607";
+    }
+  }
+}

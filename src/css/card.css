@@ -1,0 +1,82 @@
+@import "_common.css";
+
+$fs: $text-3;
+
+.card {
+  @mixin border-top;
+  @mixin border-bottom;
+  @mixin font-size $fs;
+
+  position: relative;
+  background-color: $bgColor;
+  padding-left: em(15, $fs);
+  padding-top: @padding-left;
+  padding-bottom: @padding-top;
+
+  &.thumbnail {
+    background-color: #f5f5f9;
+    padding-bottom: em(20, $fs);
+    border-width: 0;
+
+    & > .header {
+      display: none;
+    }
+
+    & > .body {
+      & > .content {
+        margin-top: calc(20 / 14em);
+      }
+
+      & > .tips {
+        margin-top: calc(8 / 12em);
+      }
+    }
+  }
+
+  & > .header {
+    @mixin border-bottom;
+
+    font-size: em(12, $fs);
+    padding-bottom: calc(10 / 12em);
+    color: $textColor;
+  }
+
+  & > .body {
+    font-size: 1em;
+    margin-top: em(15, $fs);
+    margin-right: em(15, $fs);
+
+    & > .title {
+      font-size: 1em;
+      color: $titleColor;
+    }
+
+    & > .content {
+      font-size: em(14, $fs);
+      margin-top: calc(10 / 14em);
+      color: $textColor;
+      line-height: 1.5;
+    }
+
+    & > .tips {
+      color: $descColor;
+      font-size: em(12, $fs);
+      margin-top: calc(15 / 12em);
+    }
+
+    & > .link,
+    & > .link > a {
+      font-size: em(14, $fs);
+      margin-top: calc(15 / 14em);
+      color: $linkColor;
+      text-decoration: none;
+    }
+
+    & > img {
+      font-size: 1em;
+      width: 100%;
+      height: auto;
+      margin-top: em(20, $fs);
+    }
+  }
+}

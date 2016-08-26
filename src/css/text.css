@@ -1,0 +1,25 @@
+@import "_common.css";
+
+.t1 {
+  @mixin font-size $text-1;
+}
+
+.t2 {
+  @mixin font-size $text-2;
+}
+
+.t3 {
+  @mixin font-size $text-3;
+}
+
+.t4 {
+  @mixin font-size $text-4;
+}
+
+.t5 {
+  @mixin font-size $text-5;
+}
+
+.t6 {
+  @mixin font-size $text-6;
+}

@@ -1,0 +1,73 @@
+@import "_common.css";
+
+$fs: $text-1;
+$width: 52;
+$height: 35;
+$radius: $height;
+$ball-height: 33;
+$ball-width: 32;
+
+.switch {
+  @mixin font-size $fs;
+
+  position: relative;
+  display: inline-block;
+  width: em(60, $fs);
+  height: em($height, $fs);
+  vertical-align: middle;
+  text-align: center;
+
+  & > input[type=checkbox] {
+    font-size: 1em;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 2;
+
+    /*
+    下面是为了兼容
+    */
+    width: 33.33%;
+    height: 66.66%;
+    transform: scale(3, 1.5);
+    transform-origin: 0 0;
+
+    &:checked + .slider {
+      background-color: $primaryBorderColor;
+
+      &::before {
+        transform: translateX(calc(em($width, $fs) / 2));
+      }
+    }
+  }
+
+  & > .slider {
+    font-size: 1em;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $secondaryBorderColor;
+    transition: 0.4s;
+    border-radius: em($radius, $fs);
+    z-index: 1;
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: em($ball-height, $fs);
+      width: em($ball-width, $fs);
+      left: 1px;
+      right: 1px;
+      top: 1px;
+      bottom: 1px;
+      background-color: $bgColor;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+  }
+}

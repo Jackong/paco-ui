@@ -1,0 +1,102 @@
+@import "_variables.css";
+
+$sm: 320px;
+$nm: 375px;
+$md: 414px;
+$lg: 480px;
+
+@custom-media --sm-vp (width < $nm);
+@custom-media --nm-vp (width >= $nm) and (width < $md);
+@custom-media --md-vp (width >= $md) and (width < $lg);
+@custom-media --lg-vp (width >= $lg);
+
+@define-mixin font-size $normal {
+  @media only screen and (--sm-vp) {
+    font-size: calc($sm/$nm * $normal);
+  }
+
+  @media only screen and (--nm-vp) {
+    font-size: $normal;
+  }
+
+  @media only screen and (--md-vp) {
+    font-size: calc($md/$nm * $normal);
+  }
+
+  @media only screen and (--lg-vp) {
+    font-size: calc($lg/$nm * $normal);
+  }
+}
+
+@define-mixin border $width: 1px, $color: $dividerColor, $radius: 0 {
+  position: relative;
+  border: none;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: calc($radius * 2);
+    border: $width solid $color;
+    width: 200%;
+    height: 200%;
+    transform: scale(0.5);
+    transform-origin: left top;
+  }
+}
+
+@define-mixin border-line $where, $width: 1px, $color: $dividerColor {
+  content: '';
+  position: absolute;
+  background-color: $color;
+  $(where): 0;
+
+  @if $where == left || $where == right {
+    top: 0;
+    bottom: 0;
+    width: $width;
+    transform: scaleX(0.5);
+    transform-origin: center $where;
+  }
+
+  @else {
+    left: 0;
+    right: 0;
+    height: $width;
+    transform: scaleY(0.5);
+    transform-origin: $where center;
+  }
+}
+
+@define-mixin border-left $width: 1px, $color: $dividerColor {
+  position: relative;
+
+  &::before {
+    @mixin border-line left, $width, $color;
+  }
+}
+
+@define-mixin border-right $width: 1px, $color: $dividerColor {
+  position: relative;
+
+  &::after {
+    @mixin border-line right, $width, $color;
+  }
+}
+
+@define-mixin border-top $width: 1px, $color: $dividerColor {
+  position: relative;
+
+  &::before {
+    @mixin border-line top, $width, $color;
+  }
+}
+
+@define-mixin border-bottom $width: 1px, $color: $dividerColor {
+  position: relative;
+
+  &::after {
+    @mixin border-line bottom, $width, $color;
+  }
+}

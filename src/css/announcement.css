@@ -1,0 +1,63 @@
+@import "_common.css";
+
+$fs: $text-5;
+$height: 36;
+
+.announcement-wrapper {
+  @mixin font-size $fs;
+
+  height: em($height, $fs);
+  display: block;
+
+  &.hide {
+    display: none;
+  }
+}
+
+.announcement {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: em($height, $fs);
+  line-height: @height;
+  background-color: #fff391;
+
+  & > .message {
+    color: $annoColor;
+    padding-left: em(15, $fs);
+    padding-right: em(15, $fs);
+    text-align: left;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 999999;
+    font-size: 1em;
+  }
+
+  & > .icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1000000;
+    color: $annoColor;
+    padding-left: em(15, $fs);
+    padding-right: @padding-left;
+    text-align: right;
+    display: inline;
+    user-select: none;
+    font-size: 0.8em;
+    font-weight: bolder;
+    cursor: pointer;
+
+    & + .message {
+      padding-right: em(30, $fs);
+    }
+  }
+}
+
+.navbar-wrapper ~ * .announcement {
+  top: em($navbar-height, $fs);
+}

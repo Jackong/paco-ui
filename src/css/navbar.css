@@ -1,0 +1,61 @@
+@import "_common.css";
+
+$fs: $text-4;
+
+$height: 44;
+
+.navbar-wrapper {
+  @mixin font-size $fs;
+
+  height: em($height, $fs);
+
+  &.hide {
+    display: none;
+  }
+}
+
+.navbar {
+  @mixin border-bottom;
+
+  height: em($height, $fs);
+  line-height: @height;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: $bgColor;
+  text-align: center;
+  margin-bottom: -1px;
+  z-index: 99999;
+
+  & > .title {
+    font-size: em(17, $fs);
+    width: em(200, $fs);
+    color: $titleColor;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  & > .left,
+  & > .right {
+    font-size: 1em;
+    color: $titleColor;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    padding-left: em(15, $fs);
+    padding-right: @padding-left;
+  }
+
+  & > .left {
+    left: 0;
+  }
+
+  & > .right {
+    right: 0;
+  }
+}

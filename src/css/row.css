@@ -1,0 +1,209 @@
+@import "_common.css";
+
+$fs: $text-3;
+
+.row {
+  @mixin border-top;
+  @mixin border-bottom;
+  @mixin font-size $fs;
+
+  width: 100%;
+  background-color: $bgColor;
+  position: relative;
+
+  & > .title {
+    font-size: 1em;
+    color: $titleColor;
+    margin-left: em(15, $fs);
+  }
+
+  & > .badge {
+    background-color: #f03642;
+    vertical-align: middle;
+
+    &.unread {
+      width: em(10, $fs);
+      height: @width;
+      border-radius: @height;
+      display: inline-block;
+    }
+  }
+
+  & > .desc {
+    font-size: em(14, $fs);
+    color: $descColor;
+  }
+
+  &.single {
+    height: em(44, $fs);
+    line-height: @height;
+
+    &.thumbnail > img {
+      width: em(29, $fs);
+      height: @width;
+      line-height: @height;
+      vertical-align: middle;
+    }
+
+    & > .title {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    & > .desc {
+      position: absolute;
+      right: 0;
+      padding-right: 1em;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+
+      & > .icon {
+        font-size: 1em;
+        margin-left: calc(10 / 14em);
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+    & > .badge {
+      margin-left: em(10, $fs);
+
+      &.new {
+        width: auto;
+        height: em(12, $fs);
+        line-height: @height;
+        border-radius: @height;
+        padding: em(6, $fs) em(4, $fs);
+        color: $bgColor;
+        font-size: em(8, $fs);
+        display: inline-block;
+        text-align: center;
+
+        &::before {
+          content: "new";
+        }
+      }
+    }
+  }
+
+  &.double {
+    height: em(59, $fs);
+    line-height: @height;
+
+    & > .title {
+      line-height: 1;
+      display: block;
+      transform: translateY(100%);
+    }
+
+    & > .desc {
+      margin-top: em(7, $fs);
+      line-height: 1;
+      display: block;
+      margin-left: calc(15 / 14em);
+      transform: translateY(100%);
+
+      & > .icon {
+        position: absolute;
+        right: 0;
+        padding: 1em;
+        top: 50%;
+        transform: translateY(-75%);
+      }
+    }
+
+    & > .badge {
+      position: absolute;
+      left: em(40, $fs);
+      top: em(5, $fs);
+    }
+
+    & > .time {
+      color: $descColor;
+      font-size: em(12, $fs);
+      line-height: 1;
+      position: absolute;
+      right: calc(14 / 12em);
+      top: calc(11 / 12em);
+    }
+
+    &.thumbnail {
+      & > img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: em(45, $fs);
+        height: @width;
+        line-height: @height;
+        border-radius: em(4, $fs);
+      }
+
+      & > .time {
+        right: calc(28 / 12em);
+      }
+    }
+  }
+}
+
+.list {
+  @mixin border-top;
+  @mixin border-bottom;
+
+  background-color: $bgColor;
+  overflow: hidden;
+
+  & > .row {
+    @mixin border-bottom 0;
+
+    margin-left: em(15, $fs);
+
+    &.single {
+      &.thumbnail {
+        margin-left: em(60, $fs);
+
+        & > img {
+          margin-left: em(-45, $fs);
+
+          & + .title {
+            margin-left: em(15, $fs);
+          }
+
+          & ~ .desc {
+            right: em(70, $fs);
+          }
+        }
+      }
+    }
+
+    &.double {
+      &.thumbnail {
+        margin-left: em(15, $fs);
+
+        & > img ~ .desc {
+          margin-left: calc(60 / 14em);
+        }
+      }
+
+      & > img + .title {
+        margin-left: em(60, $fs);
+      }
+
+      & > .desc {
+        margin-left: 0;
+      }
+    }
+
+    & > .title {
+      margin-left: 0;
+    }
+
+    &.single > .desc,
+    &.double > .desc > .icon {
+      right: 1em;
+      padding-right: 1em;
+    }
+  }
+}
