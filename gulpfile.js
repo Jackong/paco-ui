@@ -7,12 +7,13 @@ const rename = require('gulp-rename');
 const pkg = require('./package.json');
 const version = pkg.version;
 
-const buildDir = './lib';
+const buildDir = './css';
 
 gulp.task('clean', () => del([buildDir]));
 
 gulp.task('postcss', () => {
   return gulp.src('src/css/paco.css')
+    .pipe(sourcemaps.init())
     .pipe(postcss([
       require('postcss-import'),
       require('postcss-custom-media'),
@@ -29,6 +30,7 @@ gulp.task('postcss', () => {
       require('css-mqpacker'),
       require('cssnano'),
     ]))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(`${buildDir}`));
 });
 
@@ -46,4 +48,4 @@ gulp.task('watch', ['postcss'], () => {
   return gulp.watch('src/css/*.css', ['postcss']);
 });
 
-gulp.task('build', ['postcss', 'rename']);
+gulp.task('build', ['postcss']);
