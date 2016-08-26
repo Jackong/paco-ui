@@ -21,6 +21,8 @@
 <link rel="stylesheet" href="//o9s0jh825.qnssl.com/paco-ui/VERSION/paco-ui.min.css" charset="utf-8">
 ```
 
+> `VERSION`为版本号，具体见最新tag
+
 - 方法二：NPM
 
 ```bash
