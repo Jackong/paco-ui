@@ -12,7 +12,7 @@ const buildDir = './css';
 gulp.task('clean', () => del([buildDir]));
 
 gulp.task('postcss', () => {
-  return gulp.src('src/css/paco.css')
+  return gulp.src('src/css/paco-ui.css')
     .pipe(sourcemaps.init())
     .pipe(postcss([
       require('postcss-import'),
@@ -35,7 +35,7 @@ gulp.task('postcss', () => {
 });
 
 gulp.task('rename', ['postcss'], () => {
-  return gulp.src([`${buildDir}/paco.css`])
+  return gulp.src([`${buildDir}/paco-ui.css`])
   .pipe(sourcemaps.init())
   .pipe(rename({
     suffix: '.min',
