@@ -45,6 +45,7 @@ $fs: 15px;
     color: $titleColor;
     vertical-align: middle;
     flex: 2;
+    margin-right: 3em;
 
     &::placeholder {
       color: $tipsColor;

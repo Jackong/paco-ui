@@ -1,6 +1,6 @@
 @import "_common.css";
 
-.icon {
+.icon-wrapper {
   font-size: 1em;
   width: 1em;
   height: @width;
