@@ -22,6 +22,10 @@
 @import "card.css";
 @import "illustration.css";
 @import "actionsheet.css";
+@import "result.css";
+@import "icon.css";
+@import "verification.css";
+@import "addon.css";
 
 html,
 body {

@@ -1,0 +1,58 @@
+@import "_common.css";
+
+$fs: $text-4;
+
+.result {
+  @mixin font-size $fs;
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: em(30, $fs);
+  text-align: center;
+
+  &.success {
+    color: $linkColor;
+  }
+
+  &.failure {
+    color: #f4333c;
+  }
+
+  &.warning {
+    color: #ffc600;
+  }
+
+  &.waiting {
+    color: #2cd7aa;
+  }
+
+  &.tips {
+    color: $linkColor;
+  }
+
+  & > .icon {
+    font-size: em(90, $fs);
+    width: 1em;
+    height: @width;
+  }
+
+  & > .title {
+    font-size: em(21, $fs);
+    margin-top: 1em;
+  }
+
+  & > .description {
+    font-size: 1em;
+    color: $descColor;
+    margin-top: em(20, $fs);
+    margin-bottom: em(30, $fs);
+    margin-left: em(30, $fs);
+    margin-right: @margin-left;
+  }
+}
+
+.navbar-wrapper ~ .result,
+.navbar-wrapper ~ * .result {
+  top: em($navbar-height + 30, $fs);
+}

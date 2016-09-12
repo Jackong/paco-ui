@@ -1,0 +1,14 @@
+@import "_common.css";
+
+.icon-wrapper {
+  font-size: 1em;
+  width: 1em;
+  height: @width;
+  line-height: @height;
+  color: $tipsColor;
+  cursor: pointer;
+
+  &.highlight {
+    color: $primaryColor;
+  }
+}
