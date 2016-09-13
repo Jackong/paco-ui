@@ -9,6 +9,7 @@ $fs: $text-4;
   cursor: pointer;
   user-select: none;
   position: relative;
+  vertical-align: middle;
 
   & > input[type=checkbox] {
     position: absolute;
@@ -27,8 +28,8 @@ $fs: $text-4;
       line-height: 1;
       color: $tipsColor;
       cursor: pointer;
-      vertical-align: middle;
-      margin-right: em(4, $fs);
+      display: block;
+      margin: auto;
     }
 
     & + .paco::before {

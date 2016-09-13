@@ -1,6 +1,6 @@
 @import "_common.css";
 
-.verification {
+.captcha {
   color: $primaryColor;
   padding-left: calc(17.5 / 15em);
   height: calc(18 / 15em);
@@ -11,8 +11,15 @@
   border-radius: 0;
   border-left: 1px solid $dividerColor;
 
-  &.timing {
+  &.waiting {
     color: #e6e6e6;
     cursor: default;
+  }
+
+  & img {
+    vertical-align: middle;
+    margin-right: 0.3em;
+    height: 2em;
+    width: auto;
   }
 }

@@ -73,6 +73,17 @@ $fs: $text-3;
     }
   }
 
+  & > .btn {
+    font-size: 0.8em;
+    position: absolute;
+    right: 1em;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 2.5em;
+    width: 6em;
+  }
+
   &.hide {
     display: none;
   }
