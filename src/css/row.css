@@ -63,6 +63,7 @@ $fs: $text-3;
         margin-left: calc(10 / 14em);
         display: inline-block;
         vertical-align: middle;
+        line-height: 1;
       }
     }
 
