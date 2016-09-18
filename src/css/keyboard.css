@@ -1,0 +1,86 @@
+@import "_common.css";
+
+$fs: 22.5px;
+
+.keyboard {
+  @mixin font-size $fs;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  background-color: rgba(195, 199, 207, 0.75);
+  text-align: center;
+  user-select: none;
+
+  & > .keys {
+    margin-top: em(12, $fs);
+    position: relative;
+
+    &:first-of-type {
+      margin-top: em(10, $fs);
+    }
+
+    &:last-of-type {
+      margin-bottom: em(8, $fs);
+    }
+
+    & > .key {
+      font-size: 1em;
+      display: inline-block;
+      background-color: #fff;
+      box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.35);
+      width: em(31, $fs);
+      height: em(42, $fs);
+      border-radius: em(3, $fs);
+      line-height: @height;
+      color: #000;
+      text-align: center;
+      margin-right: em(6, $fs);
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      &.selected {
+        background-color: $linkColor;
+        color: #fff;
+      }
+
+      &.disabled {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+      }
+
+      &.upper,
+      &.delete {
+        width: em(42, $fs);
+      }
+
+      &.upper {
+        margin-right: em(14, $fs);
+      }
+
+      &.delete {
+        margin-left: em(8, $fs);
+      }
+
+      &.minus,
+      &.mult {
+        width: em(40, $fs);
+        margin-right: em(6.5, $fs);
+      }
+
+      &.blank {
+        width: 48.5%;
+        margin-right: em(6, $fs);
+      }
+
+      &.back {
+        width: 23.33%;
+      }
+    }
+  }
+}
