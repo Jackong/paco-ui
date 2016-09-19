@@ -1,10 +1,10 @@
 
 @font-face {font-family: "paco";
-  src: url('iconfont.eot?t=1473821254'); /* IE9*/
-  src: url('iconfont.eot?t=1473821254#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1473821254') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1473821254') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1473821254#paco') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1474253033'); /* IE9*/
+  src: url('iconfont.eot?t=1474253033#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1474253033') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1474253033') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1474253033#paco') format('svg'); /* iOS 4.1- */
 }
 
 .paco {
@@ -75,3 +75,5 @@
 .icon-waiting:before { content: "\e638"; }
 .icon-warning:before { content: "\e639"; }
 .icon-like:before { content: "\e63b"; }
+.icon-upper:before { content: "\e63c"; }
+.icon-delete:before { content: "\e63e"; }
