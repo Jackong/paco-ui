@@ -13,7 +13,7 @@ const buildDir = './css';
 gulp.task('clean', () => del([buildDir]));
 
 gulp.task('postcss', () => {
-  return gulp.src('src/css/paco-ui.css')
+  return gulp.src(['!src/css/_*.css', 'src/css/*.css'])
     .pipe(sourcemaps.init())
     .pipe(postcss([
       require('postcss-import'),
