@@ -26,6 +26,8 @@
 @import "icon.css";
 @import "captcha.css";
 @import "addon.css";
+@import "keyboard.css";
+@import "plate.css";
 
 html,
 body {
