@@ -3,7 +3,7 @@
 $fs: 15px;
 
 .plate {
-  @mixin font-size @fs;
+  @mixin font-size $fs;
 
   color: $titleColor;
   position: relative;
