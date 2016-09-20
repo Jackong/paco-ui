@@ -11,5 +11,11 @@
 
   &.left {
     position: relative;
+    margin: 0;
+    vertical-align: middle;
+  }
+
+  &:active {
+    background-color: $secondaryActiveBorderColor;
   }
 }
