@@ -32,6 +32,10 @@ npm i --save paco-ui
 
 ```js
 import 'paco-ui';
+//OR only button css
+import 'paco-ui/css/button.css';
+//OR only button postcss
+import 'paco-ui/src/css/button.css';
 ```
 
 ### 框架版
