@@ -1,90 +1,33 @@
-@import "_common.css";
-
-$fs: $text-3;
+@import "_ad.css";
 
 .ad {
-  @mixin border-top;
-  @mixin font-size $fs;
-
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: $bgColor;
-  opacity: 0.9;
-  height: em(75, $fs);
-  display: inline-block;
-  z-index: 999999;
+  @extend %ad;
 
   & > .logo {
-    width: em(52.5, $fs);
-    height: em(52.5, $fs);
-    position: absolute;
-    left: em(15, $fs);
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    font-size: 1em;
+    @extend %ad-logo;
   }
 
   & > .content {
-    height: em(44.5, $fs);
-    position: absolute;
-    left: em(81.5, $fs);
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    display: inline-block;
-    font-size: 1em;
+    @extend %ad-content;
 
     & > .title {
-      font-size: 1em;
-      color: $titleColor;
-      text-align: left;
+      @extend %ad-title;
     }
 
     & > .desc {
-      @mixin font-size $text-4;
-
-      color: $descColor;
-      text-align: left;
-      margin-top: em(8, $text-4);
+      @extend %ad-desc;
     }
   }
 
   & > .close {
-    @mixin font-size 10px;
-
-    position: absolute;
-    right: 0;
-    top: 0;
-    user-select: none;
-    color: #fbfbfb;
-    padding: 0.2em;
-
-    &::after {
-      position: absolute;
-      right: 0;
-      top: 0;
-      content: " ";
-      border-color: #dfdfdf #dfdfdf transparent transparent;
-      border-style: solid;
-      border-width: em(13, 10px);
-      z-index: -1;
-    }
+    @extend %ad-close;
   }
 
-  & > .btn {
-    font-size: 0.8em;
-    position: absolute;
-    right: 1em;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    height: 2.5em;
-    width: 6em;
+  & > .btn.primary {
+    @extend %ad-download;
   }
 
   &.hide {
-    display: none;
+    @extend %hide;
   }
 }

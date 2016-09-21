@@ -1,0 +1,67 @@
+@import "_item.css";
+
+.item {
+  @extend %item;
+
+  &.single {
+    @extend %item-single;
+
+    & > .thumbnail {
+      @extend %item-single-thumbnail;
+    }
+
+    & > .title {
+      @extend %item-single-title;
+    }
+
+    & > .badge-ctn {
+      @extend %item-single-badge;
+    }
+
+    & > .description {
+      @extend %item-single-description;
+
+      & > .icon {
+        @extend %item-single-icon;
+      }
+    }
+  }
+
+  &.double {
+    @extend %item-double;
+
+    & > .thumbnail {
+      @extend %item-double-thumbnail;
+    }
+
+    & > .content {
+      @extend %item-double-content;
+
+      & > .badge-ctn {
+        @extend %item-double-badge;
+      }
+
+      & > .title {
+        @extend %item-double-title;
+      }
+
+      & > .description {
+        @extend %item-double-description;
+      }
+    }
+
+    & > .icon {
+      @extend %item-double-icon;
+    }
+
+    & > .tips {
+      @extend %item-double-tips;
+    }
+  }
+}
+
+.list {
+  & > .item {
+    @extend %item-in-list;
+  }
+}

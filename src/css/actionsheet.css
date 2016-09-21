@@ -1,55 +1,17 @@
-@import "_common.css";
+@import "_actionsheet.css";
 
-$fs: $text-4;
+.actionsheet {
+  @extend %actionsheet;
 
-.actionsheet-wrapper {
-  &.hide {
-    display: none;
+  & > .tips {
+    @extend %actionsheet-tips;
   }
 
-  & > .actionsheet {
-    @mixin font-size $fs;
+  > .btn {
+    @extend %actionsheet-btn;
 
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #f1f1f4;
-    z-index: 999999;
-
-    & > .tips {
-      background-color: $bgColor;
-      text-align: center;
-      font-size: 1em;
-      color: $descColor;
-      width: 84%;
-      height: em(55, $fs);
-      line-height: 1.4;
-      display: block;
-      margin: 0;
-      padding-top: em(20, $fs);
-      padding-left: 8%;
-      padding-right: @padding-left;
-    }
-
-    > .btn {
-      @mixin border-top 0;
-
-      height: em(53, $text-2);
-
-      &:last-child,
-      &:nth-child(2) {
-        @mixin border-top;
-      }
-
-      &.bottom {
-        color: $titleColor;
-
-        &:last-child {
-          margin-top: em(10, $fs);
-        }
-      }
+    &.bottom {
+      @extend %actionsheet-cancel;
     }
   }
 }

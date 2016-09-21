@@ -1,63 +1,25 @@
-@import "_common.css";
-
-$fs: $text-4;
+@import "_modal.css";
 
 .modal {
-  @mixin font-size $fs;
-
-  background-color: $bgColor;
-  position: fixed;
-  left: em(30, $fs);
-  right: em(30, $fs);
-  top: 22.2%;
-  margin: auto;
-  border-radius: em(4, $fs);
-  text-align: center;
-  z-index: 999999;
+  @extend %modal;
 
   & > .image {
-    margin-top: em(30, $fs);
-    width: em(187, $fs);
-    height: auto;
-    border-radius: @height;
-    user-select: none;
-    font-size: 1em;
-  }
-
-  & > .desc,
-  & > .tips {
-    font-size: 1em;
-    color: #aaa;
+    @extend %modal-image;
   }
 
   & > .desc {
-    margin-top: em(20, $fs);
+    @extend %modal-desc;
   }
 
-  & > .tips {
-    margin-top: em(8, $fs);
-  }
-
-  & > .btns {
-    font-size: 1em;
-    margin: em(20, $fs) 0 em(32, $fs);
-    width: 100%;
+  & > .btn {
+    @extend %modal-btn;
   }
 
   & > .close {
-    font-size: 1em;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: em(19, $fs);
-    height: @width;
-    color: #9a9a9a;
-    user-select: none;
-    padding: em(15, $fs);
-    cursor: pointer;
+    @extend %modal-close;
   }
-}
 
-.modal.hide {
-  display: none;
+  &.hide {
+    @extend %hide;
+  }
 }

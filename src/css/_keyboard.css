@@ -1,0 +1,73 @@
+@import "_common.css";
+
+$fs: 22.5;
+
+%keyboard {
+  @mixin font-size $fs;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  background-color: rgba(195, 199, 207, 0.75);
+  text-align: center;
+  user-select: none;
+  z-index: 999999;
+}
+
+%keyboard-keys {
+  margin-top: calc(12em / $fs);
+  position: relative;
+
+  &:first-of-type {
+    margin-top: calc(10em / $fs);
+  }
+
+  &:last-of-type {
+    margin-bottom: calc(8em / $fs);
+  }
+}
+
+%keyboard-key {
+  font-size: 1em;
+  display: inline-block;
+  background-color: #fff;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.35);
+  width: calc(31em / $fs);
+  height: calc(42em / $fs);
+  border-radius: calc(3em / $fs);
+  line-height: @height;
+  color: #000;
+  text-align: center;
+  margin-right: calc(6em / $fs);
+  user-select: none;
+  outline-style: none;
+  cursor: pointer;
+  border-style: none;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &:active {
+    background-color: $linkColor;
+    color: #fff;
+  }
+
+  &:disabled {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+  }
+}
+
+%keyboard-upper {
+  width: calc(42em / $fs);
+  margin-right: calc(14em / $fs);
+}
+
+%keyboard-delete {
+  width: calc(42em / $fs);
+  margin-left: calc(8em / $fs);
+}

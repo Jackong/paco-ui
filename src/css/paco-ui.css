@@ -7,7 +7,6 @@
 @import "tab.css";
 @import "toast.css";
 @import "alert.css";
-@import "loading.css";
 @import "switch.css";
 @import "ad.css";
 @import "modal.css";
@@ -17,7 +16,6 @@
 @import "checkbox.css";
 @import "agreement.css";
 @import "navbar.css";
-@import "row.css";
 @import "text.css";
 @import "card.css";
 @import "illustration.css";
@@ -28,6 +26,8 @@
 @import "addon.css";
 @import "keyboard.css";
 @import "plate.css";
+@import "item.css";
+@import "badge.css";
 
 html,
 body {

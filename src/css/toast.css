@@ -1,23 +1,27 @@
-@import "toast-box.css";
+@import "_toast.css";
+@import "_loading.css";
 
 .toast {
+  @extend %toast;
+
   & > .icon {
-    font-family: "paco" !important;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-stroke-width: 0.2px;
-    -moz-osx-font-smoothing: grayscale;
+    @extend %toast-icon;
   }
 
-  & > .success::before {
-    content: "\e614";
+  & > .message {
+    @extend %toast-message;
   }
 
-  & > .fail::before {
-    content: "\e615";
+  &.hide {
+    @extend %hide;
   }
 
-  & > .opps::before {
-    content: "\e616";
+  & > .loading {
+    @extend %loading;
   }
+}
+
+.navbar-wrapper ~ .toast,
+.navbar-wrapper ~ * .toast {
+  @extend %toast-for-navbar;
 }

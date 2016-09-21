@@ -1,0 +1,60 @@
+@import "_common.css";
+
+$fs: $text-4;
+
+$height: 44;
+
+%navbar-wrapper {
+  @mixin font-size $fs;
+
+  height: calc($height / $fs * 1em);
+}
+
+%navbar {
+  @mixin border-bottom;
+
+  height: calc($height / $fs * 1em);
+  line-height: @height;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: $bgColor;
+  text-align: center;
+  margin-bottom: -1px;
+  z-index: 99999;
+}
+
+%navbar-title {
+  font-size: calc(17em / $fs);
+  width: calc(200em / $fs);
+  color: $titleColor;
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+%navbar-addon {
+  font-size: 1em;
+  color: $titleColor;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding-left: calc(15em / $fs);
+  padding-right: @padding-left;
+}
+
+%navbar-left {
+  @extend %navbar-addon;
+
+  left: 0;
+}
+
+%navbar-right {
+  @extend %navbar-addon;
+
+  right: 0;
+}

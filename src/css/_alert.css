@@ -1,0 +1,93 @@
+@import "_common.css";
+
+$fs: $text-3;
+
+%alert {
+  @mixin font-size $fs;
+
+  border-radius: calc(10em / $fs);
+  overflow: hidden;
+  background: $bgColor;
+  width: calc(313em / $fs);
+  height: auto;
+  position: fixed;
+  top: calc(241em / $fs);
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 999999;
+  border: 1px solid #e5e5e5;
+}
+
+%alert-for-navbar {
+  top: calc((241 - $navbar-height) / $fs * 1em);
+}
+
+%alert-header {
+  font-size: calc(17em / $fs);
+  color: $titleColor;
+  margin-top: calc(26em / $fs);
+  text-align: center;
+  font-weight: bolder;
+}
+
+%alert-message {
+  font-size: calc(16em / $fs);
+  color: $titleColor;
+  text-align: center;
+  margin-top: calc(17em / $fs);
+  margin-left: calc(15.75em / $fs);
+  margin-right: @margin-left;
+  margin-bottom: calc(26em / $fs);
+  line-height: 1;
+}
+
+%alert-btn-group {
+  height: auto;
+  width: 100%;
+  font-size: calc(17em / $fs);
+  box-sizing: border-box;
+}
+
+%alert-btn {
+  @mixin border 1px, $dividerColor, 0;
+
+  float: left;
+  font-size: 1em;
+  margin: 0;
+}
+
+%alert-1-btn {
+  @extend %alert-btn;
+
+  color: $linkColor;
+  width: 100%;
+
+  &::before {
+    border-left-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+  }
+}
+
+%alert-2-btn {
+  @extend %alert-btn;
+
+  width: 50%;
+
+  &::before {
+    border-bottom-width: 0;
+    border-right-width: 0;
+  }
+
+  &:first-child {
+    color: $descColor;
+
+    &::before {
+      border-left-width: 0;
+    }
+  }
+
+  &:last-child {
+    color: $linkColor;
+  }
+}

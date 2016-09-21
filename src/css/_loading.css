@@ -1,6 +1,6 @@
-@import "toast-box.css";
+@import "_common.css";
 
-.toast > .loading {
+%loading {
   animation-name: loading-anim;
   animation-duration: 1s;
   animation-iteration-count: infinite;

@@ -1,67 +1,13 @@
-@import "_common.css";
-
-$fs: 15px;
+@import "_input.css";
 
 .input-box {
-  @mixin font-size $fs;
-
-  background-color: $bgColor;
-  height: em(44, $fs);
-  line-height: @height;
-  width: 100%;
-  text-align: left;
-  color: $titleColor;
-  display: flex;
-  align-items: center;
-  position: relative;
+  @extend %input;
 
   > label {
-    display: inline-block;
-    font-size: 1em;
-    line-height: 1;
-    white-space: nowrap;
-    margin-left: em(17.5, $fs);
-    min-width: em(70, $fs);
-    max-width: em(85, $fs);
-    overflow-x: hidden;
-    vertical-align: middle;
-
-    &.hide {
-      display: none;
-    }
-
-    & + * {
-      margin-left: em(17.5, $fs);
-    }
+    @extend %input-label;
   }
 
   > input {
-    display: inline;
-    font-size: 1em;
-    outline: none;
-    border-width: 0;
-    padding: 0;
-    line-height: 1.5;
-    color: $titleColor;
-    vertical-align: middle;
-    flex: 2;
-    margin-right: 3em;
-
-    &::placeholder {
-      color: $tipsColor;
-    }
-
-    /*
-      cursor cololr
-    */
-    color: $linkColor;
-    text-shadow: 0 0 0 $titleColor;
-    -webkit-text-fill-color: transparent;
-
-    &::-webkit-input-placeholder {
-      color: $tipsColor;
-      text-shadow: none;
-      -webkit-text-fill-color: initial;
-    }
+    @extend %input-value;
   }
 }

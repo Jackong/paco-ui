@@ -20,7 +20,6 @@ gulp.task('postcss', () => {
       require('postcss-custom-media'),
       require('postcss-media-minmax'),
       require('precss'),
-      require('postcss-functions')(require('./postcss/functions')),
       require('postcss-calc'),
       require('postcss-advanced-variables'),
       require('postcss-svg')({
@@ -46,7 +45,7 @@ gulp.task('rename', ['postcss'], () => {
 });
 
 gulp.task('watch', ['postcss'], () => {
-  return gulp.watch('src/css/*.css', ['postcss']);
+  return gulp.watch('src/**/*.css', ['postcss']);
 });
 
 gulp.task('build', ['postcss']);

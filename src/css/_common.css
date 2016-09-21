@@ -1,2 +1,6 @@
 @import "_variables.css";
 @import "_mixins.css";
+
+@define-extend %hide {
+  display: none;
+}

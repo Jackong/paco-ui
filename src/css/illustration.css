@@ -1,41 +1,17 @@
-@import "_common.css";
-
-$fs: $text-3;
+@import "_illustration.css";
 
 .illustration {
-  @mixin font-size $fs;
-
-  display: block;
-  margin-top: em(75, $fs);
-  text-align: center;
+  @extend %illustration;
 
   & > img {
-    font-size: 1em;
-    width: em(135, $fs);
-    height: auto;
-    display: block;
-    margin: 0 auto;
+    @extend %illustration-image;
   }
 
   & > .body {
-    font-size: 1em;
-    color: $descColor;
-    margin-top: em(25, $fs);
-    display: inline-block;
-    width: 100%;
-
-    & > p {
-      font-size: 1em;
-      margin: em(8, $fs) 0 0 0;
-
-      &:first-child {
-        margin: 0;
-      }
-    }
+    @extend %illustration-body;
 
     & > .btn {
-      font-size: 1em;
-      margin-top: em(45, $fs);
+      @extend %illustration-btn;
     }
   }
 }

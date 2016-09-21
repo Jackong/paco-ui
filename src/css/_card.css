@@ -1,0 +1,79 @@
+@import "_common.css";
+
+$fs: $text-3;
+
+%card {
+  @mixin border-top;
+  @mixin border-bottom;
+  @mixin font-size $fs;
+
+  position: relative;
+  background-color: $bgColor;
+  padding-left: calc(15em / $fs);
+  padding-top: @padding-left;
+  padding-bottom: @padding-top;
+}
+
+%card-header {
+  @mixin border-bottom;
+
+  font-size: calc(12em / $fs);
+  padding-bottom: calc(10 / 12em);
+  color: $textColor;
+}
+
+%card-body {
+  font-size: 1em;
+  margin-top: calc(15em / $fs);
+  margin-right: calc(15em / $fs);
+}
+
+%card-title {
+  font-size: 1em;
+  color: $titleColor;
+}
+
+%card-content {
+  font-size: calc(14em / $fs);
+  margin-top: calc(10 / 14em);
+  color: $textColor;
+  line-height: 1.5;
+}
+
+%card-tips {
+  color: $descColor;
+  font-size: calc(12em / $fs);
+  margin-top: calc(15 / 12em);
+}
+
+%card-link {
+  font-size: calc(14em / $fs);
+  margin-top: calc(15 / 14em);
+  color: $linkColor;
+  text-decoration: none;
+}
+
+%card-image {
+  font-size: 1em;
+  width: 100%;
+  height: auto;
+  margin-top: calc(20em / $fs);
+}
+
+%card-thumbnail {
+  background-color: #f5f5f9;
+  padding-bottom: calc(20em / $fs);
+  border-width: 0;
+}
+
+%card-thumbnail-header {
+  @extend %hide;
+}
+
+%card-thumbnail-content {
+  margin-top: calc(20 / 14em);
+}
+
+%card-thumbnail-tips {
+  margin-top: calc(8 / 12em);
+}

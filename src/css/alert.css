@@ -1,93 +1,34 @@
-@import "_common.css";
-
-$fs: $text-3;
+@import "_alert.css";
 
 .alert {
-  @mixin font-size $fs;
-
-  border-radius: em(10, $fs);
-  overflow: hidden;
-  background: $bgColor;
-  width: em(313, $fs);
-  height: auto;
-  position: fixed;
-  top: em(241, $fs);
-  left: 50%;
-  transform: translate(-50%);
-  z-index: 999999;
-  border: 1px solid #e5e5e5;
+  @extend %alert;
 
   & > .header {
-    font-size: em(17, $fs);
-    color: $titleColor;
-    margin-top: em(26, $fs);
-    text-align: center;
+    @extend %alert-header;
   }
 
   & > .message {
-    font-size: em(16, $fs);
-    color: $titleColor;
-    text-align: center;
-    margin-top: em(17, $fs);
-    margin-left: em(15.75, $fs);
-    margin-right: @margin-left;
-    margin-bottom: em(26, $fs);
-    line-height: 1;
+    @extend %alert-message;
   }
 
   & > .btn-group {
-    height: auto;
-    width: 100%;
-    font-size: em(17, $fs);
-    box-sizing: border-box;
-
-    & > .btn {
-      @mixin border 1px, $dividerColor, 0;
-
-      float: left;
-      font-size: 1em;
-      margin: 0;
-    }
-
-    &.col-1 > .btn::before {
-      border-left-width: 0;
-      border-right-width: 0;
-      border-bottom-width: 0;
-    }
+    @extend %alert-btn-group;
 
     &.col-1 > .btn {
-      color: $linkColor;
-      width: 100%;
+      @extend %alert-1-btn;
     }
 
     &.col-2 > .btn {
-      width: 50%;
-    }
-
-    &.col-2 > .btn::before {
-      border-bottom-width: 0;
-      border-right-width: 0;
-    }
-
-    &.col-2 > .btn:first-child::before {
-      border-left-width: 0;
-    }
-
-    &.col-2 > .btn:first-child {
-      color: $descColor;
-    }
-
-    &.col-2 > .btn:last-child {
-      color: $linkColor;
+      @extend %alert-2-btn;
     }
   }
 }
 
 .hide {
-  display: none;
+  @extend %hide;
 }
 
 .navbar-wrapper ~ .alert,
 .navbar-wrapper ~ * .alert {
-  top: em(241 - $navbar-height, $fs);
+  @extend %alert-for-navbar;
 }

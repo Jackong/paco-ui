@@ -1,80 +1,39 @@
-@import "_common.css";
-
-$fs: $text-6;
+@import "_share.css";
 
 .share {
-  @mixin font-size $fs;
-
-  background-color: rgba(255, 255, 255, 0.9);
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  z-index: 999999;
-  width: 100%;
-  height: em(195, $fs);
-  display: flex;
+  @extend %share;
 
   & > .channel {
-    margin-top: em(35, $fs);
-    font-size: 1em;
-    cursor: pointer;
-
     & > .bg {
-      font-size: 1em;
-      background-color: $bgColor;
-      width: em(59, $fs);
-      height: @width;
-      border-radius: em(10, $fs);
-      display: inline-block;
-      position: relative;
+      @extend %share-channel-bg;
 
       & > .image {
-        font-size: 1em;
-        width: em(40, $fs);
-        height: @width;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        margin: auto;
+        @extend %share-channel-image;
       }
     }
 
     & > .name {
-      font-size: 1em;
-      color: $textColor;
-      margin-top: em(10, $fs);
+      @extend %share-channel-name;
     }
   }
 
-  & > .cancel {
-    width: 100%;
-    height: em(55, $fs);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    & > .btn {
-      border-width: 0;
-      color: $titleColor;
-    }
+  & > .btn {
+    @extend %share-cancel;
   }
 
   &.col-1 > .channel {
-    width: 100%;
+    @mixin share-channel 1;
   }
 
   &.col-2 > .channel {
-    width: calc(100% / 2);
+    @mixin share-channel 2;
   }
 
   &.col-3 > .channel {
-    width: calc(100% / 3);
+    @mixin share-channel 3;
   }
 
   &.col-4 > .channel {
-    width: calc(100% / 4);
+    @mixin share-channel 4;
   }
 }

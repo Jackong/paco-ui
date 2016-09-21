@@ -1,0 +1,60 @@
+@import "_common.css";
+
+$fs: 15;
+
+%input {
+  @mixin font-size $fs;
+
+  background-color: $bgColor;
+  height: calc(44em / $fs);
+  line-height: @height;
+  width: 100%;
+  text-align: left;
+  color: $titleColor;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+%input-label {
+  display: inline-block;
+  font-size: 1em;
+  line-height: 1;
+  white-space: nowrap;
+  margin-left: calc(17.5em / $fs);
+  min-width: calc(70em / $fs);
+  max-width: calc(85em / $fs);
+  overflow-x: hidden;
+  vertical-align: middle;
+}
+
+%input-value {
+  display: inline;
+  font-size: 1em;
+  outline: none;
+  border-width: 0;
+  padding: 0;
+  line-height: 1.5;
+  color: $titleColor;
+  vertical-align: middle;
+  flex: 2;
+  margin-left: calc(17.5em / $fs);
+  margin-right: 3em;
+
+  &::placeholder {
+    color: $tipsColor;
+  }
+
+  /*
+    cursor cololr
+  */
+  color: $linkColor;
+  text-shadow: 0 0 0 $titleColor;
+  -webkit-text-fill-color: transparent;
+
+  &::-webkit-input-placeholder {
+    color: $tipsColor;
+    text-shadow: none;
+    -webkit-text-fill-color: initial;
+  }
+}

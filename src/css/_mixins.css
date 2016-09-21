@@ -12,19 +12,19 @@ $lg: 480px;
 
 @define-mixin font-size $normal {
   @media only screen and (--sm-vp) {
-    font-size: calc($sm/$nm * $normal);
+    font-size: calc($sm/$nm * $normal * 1px);
   }
 
   @media only screen and (--nm-vp) {
-    font-size: $normal;
+    font-size: calc($normal * 1px);
   }
 
   @media only screen and (--md-vp) {
-    font-size: calc($md/$nm * $normal);
+    font-size: calc($md/$nm * $normal * 1px);
   }
 
   @media only screen and (--lg-vp) {
-    font-size: calc($lg/$nm * $normal);
+    font-size: calc($lg/$nm * $normal * 1px);
   }
 }
 

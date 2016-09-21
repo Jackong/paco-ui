@@ -1,0 +1,40 @@
+@import "_common.css";
+
+$fs: $text-3;
+
+%illustration {
+  @mixin font-size $fs;
+
+  display: block;
+  margin-top: calc(75em / $fs);
+  text-align: center;
+}
+
+%illustration-image {
+  font-size: 1em;
+  width: calc(135em / $fs);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+%illustration-body {
+  font-size: 1em;
+  color: $descColor;
+  margin-top: calc(25em / $fs);
+  display: inline-block;
+  width: 100%;
+
+  & > * {
+    font-size: 1em;
+    margin: calc(8em / $fs) 0 0 0;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+}
+
+%illustration-btn {
+  margin: calc(45em / $fs) auto auto auto;
+}

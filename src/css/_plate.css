@@ -1,0 +1,22 @@
+@import "_common.css";
+
+$fs: 15;
+
+%plate {
+  @mixin font-size $fs;
+
+  color: $titleColor;
+  position: relative;
+  user-select: none;
+
+  &::after {
+    content: " ";
+    display: inline-block;
+    margin-left: calc(12em / $fs);
+    margin-top: 50%;
+    transform: rotate(-45deg) translateY(-50%);
+    border-color: transparent transparent $linkColor $linkColor;
+    border-style: solid;
+    border-width: calc(5em / $fs);
+  }
+}
