@@ -25,7 +25,9 @@ $fs: $text-2;
   outline-style: none;
   cursor: pointer;
   padding: 0;
+}
 
+%btn-disabled {
   &:disabled {
     @mixin btn $disabledColor, #d2d2d2, $disabledColor, $disabledColor, $disabledColor;
 
@@ -36,6 +38,8 @@ $fs: $text-2;
 %btn-primary {
   @mixin btn $primaryColor, $reverseTextColor, $primaryBorderColor, $primaryActiveColor, $primaryActiveBorderColor;
 
+  @extend %btn-disabled;
+
   width: 92%;
   margin: 0 4%;
 }
@@ -43,6 +47,8 @@ $fs: $text-2;
 %btn-secondary {
   @mixin btn $secondaryColor, $textColor, $secondaryBorderColor, $secondaryActiveColor, $secondaryActiveBorderColor;
   @mixin border 1px, $secondaryBorderColor, calc(4em / $fs);
+
+  @extend %btn-disabled;
 
   &:active {
     @mixin border 1px, $secondaryActiveBorderColor, calc(4em / $fs);
