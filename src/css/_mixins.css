@@ -5,25 +5,20 @@ $nm: 375px;
 $md: 414px;
 $lg: 480px;
 
-@custom-media --sm-vp (width < $nm);
-@custom-media --nm-vp (width >= $nm) and (width < $md);
-@custom-media --md-vp (width >= $md) and (width < $lg);
-@custom-media --lg-vp (width >= $lg);
-
 @define-mixin font-size $normal {
-  @media only screen and (--sm-vp) {
+  @media only screen and (width < $nm) {
     font-size: calc($sm/$nm * $normal * 1px);
   }
 
-  @media only screen and (--nm-vp) {
+  @media only screen and (width >= $nm) and (width < $md) {
     font-size: calc($normal * 1px);
   }
 
-  @media only screen and (--md-vp) {
+  @media only screen and (width >= $md) and (width < $lg) {
     font-size: calc($md/$nm * $normal * 1px);
   }
 
-  @media only screen and (--lg-vp) {
+  @media only screen and (width >= $lg) {
     font-size: calc($lg/$nm * $normal * 1px);
   }
 }

@@ -26,8 +26,6 @@
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^1.6.0",
     "postcss-calc": "^5.2.1",
-    "postcss-color-hex-alpha": "^2.0.0",
-    "postcss-import": "^8.1.2",
     "postcss-loader": "^0.9.1",
     "postcss-svg": "^1.0.6",
     "precss": "^1.4.0",
