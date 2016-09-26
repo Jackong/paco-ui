@@ -2,7 +2,14 @@
 
 $fs: $text-3;
 
-%item-in-list {
+%item {
+  @mixin border-top;
+  @mixin border-bottom;
+
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+
   &::after {
     left: calc(15em / $fs);
   }
@@ -18,15 +25,6 @@ $fs: $text-3;
   &:nth-of-type(1n+2) {
     @mixin border-top 0;
   }
-}
-
-%item {
-  @mixin border-top;
-  @mixin border-bottom;
-
-  width: 100%;
-  background-color: #fff;
-  position: relative;
 }
 
 %item-single {

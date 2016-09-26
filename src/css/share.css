@@ -3,6 +3,10 @@
 .share {
   @extend %share;
 
+  &.hide {
+    @extend %hide;
+  }
+
   & > .channel {
     & > .bg {
       @extend %share-channel-bg;

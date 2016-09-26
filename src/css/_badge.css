@@ -1,7 +1,10 @@
 @import "_common.css";
 
+$fs: $text-3;
+
 %badge {
-  font-size: 1em;
+  @mixin font-size $fs;
+
   display: inline-block;
   background-color: #f03642;
   color: #fff;

@@ -30,13 +30,13 @@ $fs: $text-4;
 }
 
 %actionsheet-btn {
-  @mixin border-top 0;
+  @mixin border-top;
+  @mixin border-bottom 0;
 
   height: calc(53em / $text-2);
 
-  &:last-child,
-  &:nth-child(2) {
-    @mixin border-top;
+  &:nth-last-of-type(2) {
+    @mixin border-bottom;
   }
 }
 
