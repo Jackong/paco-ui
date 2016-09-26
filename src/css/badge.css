@@ -1,0 +1,17 @@
+@import "_badge.css";
+
+.badge {
+  @extend %badge;
+
+  &.flag {
+    @extend %badge-flag;
+  }
+
+  &.small {
+    @extend %badge-small;
+  }
+
+  &.large {
+    @extend %badge-large;
+  }
+}

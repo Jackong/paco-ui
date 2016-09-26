@@ -1,0 +1,86 @@
+@import "_common.css";
+
+$fs: $text-3;
+
+%ad {
+  @mixin border-top;
+  @mixin font-size $fs;
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: $bgColor;
+  opacity: 0.9;
+  height: calc(75em / $fs);
+  display: inline-block;
+  z-index: 999999;
+}
+
+%ad-logo {
+  width: calc(52.5em / $fs);
+  height: calc(52.5em / $fs);
+  position: absolute;
+  left: calc(15em / $fs);
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 1em;
+}
+
+%ad-content {
+  height: calc(44.5em / $fs);
+  position: absolute;
+  left: calc(81.5em / $fs);
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: inline-block;
+  font-size: 1em;
+}
+
+%ad-title {
+  font-size: 1em;
+  color: $titleColor;
+  text-align: left;
+}
+
+%ad-desc {
+  @mixin font-size $text-4;
+
+  color: $descColor;
+  text-align: left;
+  margin-top: calc(8em / $text-4);
+}
+
+%ad-close {
+  @mixin font-size 10px;
+
+  position: absolute;
+  right: 0;
+  top: 0;
+  user-select: none;
+  color: #fbfbfb;
+  padding: 0.2em;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    content: " ";
+    border-color: #dfdfdf #dfdfdf transparent transparent;
+    border-style: solid;
+    border-width: calc(13em / 10);
+    z-index: -1;
+  }
+}
+
+%ad-download {
+  font-size: 0.8em;
+  position: absolute;
+  right: 1em;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 2.5em;
+  width: 6em;
+}

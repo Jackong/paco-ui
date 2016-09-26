@@ -1,0 +1,14 @@
+@import "_common.css";
+
+%icon {
+  font-size: 1em;
+  width: 1em;
+  height: @width;
+  line-height: @height;
+  color: $tipsColor;
+  cursor: pointer;
+}
+
+%icon-highlight {
+  color: $primaryColor;
+}

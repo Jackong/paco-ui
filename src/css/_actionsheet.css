@@ -1,0 +1,49 @@
+@import "_common.css";
+
+$fs: $text-4;
+
+%actionsheet {
+  @mixin font-size $fs;
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f1f1f4;
+  z-index: 999999;
+}
+
+%actionsheet-tips {
+  background-color: $bgColor;
+  text-align: center;
+  font-size: 1em;
+  color: $descColor;
+  width: 84%;
+  height: calc(55em / $fs);
+  line-height: 1.4;
+  display: block;
+  margin: 0;
+  padding-top: calc(20em / $fs);
+  padding-left: 8%;
+  padding-right: @padding-left;
+}
+
+%actionsheet-btn {
+  @mixin border-top;
+  @mixin border-bottom 0;
+
+  height: calc(53em / $text-2);
+
+  &:nth-last-of-type(2) {
+    @mixin border-bottom;
+  }
+}
+
+%actionsheet-cancel {
+  color: $titleColor;
+
+  &:last-child {
+    margin-top: calc(10em / $fs);
+  }
+}

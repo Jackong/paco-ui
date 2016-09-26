@@ -1,0 +1,57 @@
+@import "_common.css";
+
+$fs: $text-4;
+
+%result {
+  @mixin font-size $fs;
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: calc(30em / $fs);
+  text-align: center;
+}
+
+%result-for-navbar {
+  top: calc(($navbar-height + 30) / $fs * 1em);
+}
+
+%result-success {
+  color: $linkColor;
+}
+
+%result-failure {
+  color: #f4333c;
+}
+
+%result-warning {
+  color: #ffc600;
+}
+
+%result-waiting {
+  color: #2cd7aa;
+}
+
+%result-tips {
+  color: $linkColor;
+}
+
+%result-icon {
+  font-size: calc(90em / $fs);
+  width: 1em;
+  height: @width;
+}
+
+%result-title {
+  font-size: calc(21em / $fs);
+  margin-top: 1em;
+}
+
+%result-description {
+  font-size: 1em;
+  color: $descColor;
+  margin-top: calc(20em / $fs);
+  margin-bottom: calc(30em / $fs);
+  margin-left: calc(30em / $fs);
+  margin-right: @margin-left;
+}

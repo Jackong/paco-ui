@@ -1,0 +1,72 @@
+@import "_common.css";
+
+$fs: $text-4;
+
+%agree-it {
+  @mixin font-size $fs;
+
+  vertical-align: middle;
+  display: inline-block;
+
+  & a {
+    color: $linkColor;
+    text-decoration: none;
+    vertical-align: middle;
+  }
+}
+
+%agreement {
+  @mixin font-size $fs;
+
+  background-color: #f1f1f4;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 89.33%;
+  padding-left: 5.33%;
+  padding-right: @padding-left;
+  overflow: hidden;
+
+  & > * {
+    margin: 0;
+  }
+}
+
+%agreement-for-navbar {
+  top: calc($navbar-height / $fs * 1em);
+}
+
+%agreement-title {
+  color: $titleColor;
+  font-size: calc(16em / $fs);
+  margin-left: calc(-20em / $fs);
+  text-align: center;
+  margin-top: calc(25em / $fs);
+  font-weight: bolder;
+}
+
+%agreement-paragraph {
+  font-size: 1em;
+  color: $textColor;
+  margin-top: calc(10em / $fs);
+  line-height: 1.25;
+}
+
+%agreement-sub-title {
+  font-size: 1em;
+  color: $titleColor;
+  margin-top: calc(15em / $fs);
+  font-weight: 200;
+}
+
+%agreement-welcome {
+  margin-top: calc(22em / $fs);
+}
+
+%agreement-foreword {
+  margin-top: calc(15em / $fs);
+}

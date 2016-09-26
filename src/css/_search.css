@@ -1,0 +1,133 @@
+@import "_common.css";
+
+$fs: $text-4;
+
+%search {
+  @mixin font-size $fs;
+
+  height: 43px;
+  line-height: @height;
+  background-color: #e6e7e9;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  z-index: 999999;
+  width: 100%;
+  text-align: center;
+}
+
+%search-icon {
+  font-size: 1em;
+  color: $tipsColor;
+  width: 1em;
+  height: @width;
+  line-height: @height;
+}
+
+%search-input {
+  font-size: 1em;
+  margin: 7px 2.666%;
+  height: 29px;
+  line-height: @height;
+  position: relative;
+}
+
+%search-input-value {
+  font-size: 1em;
+  width: 100%;
+  height: 100%;
+  display: block;
+  outline: none;
+  border-width: 0;
+  padding: 0;
+  line-height: 1.5;
+  border-radius: 6px;
+  -webkit-appearance: none;
+
+  &:focus,
+  &:valid {
+    padding-left: 7.2%;
+
+    & ~ .placeholder {
+      left: calc(5em / $fs);
+      right: inherit;
+    }
+  }
+
+  &:valid {
+    & ~ .placeholder > .text {
+      display: none;
+    }
+
+    & ~ .clear {
+      display: inline;
+    }
+  }
+
+  color: $linkColor;
+  text-shadow: 0 0 0 $titleColor;
+  -webkit-text-fill-color: transparent;
+
+  &::-webkit-input-placeholder {
+    color: $tipsColor;
+    text-shadow: none;
+    -webkit-text-fill-color: initial;
+  }
+}
+
+%search-input-placeholder {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  color: $tipsColor;
+  font-size: 1em;
+
+  & > .text {
+    margin-left: calc(7.5em / $fs);
+  }
+}
+
+%search-input-clear {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: none;
+  cursor: pointer;
+  padding: calc(7.5em / $fs);
+}
+
+%search-cancel {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: calc(16em / $fs);
+  color: $linkColor;
+  display: none;
+  padding-left: 2.666%;
+  padding-right: @padding-left;
+}
+
+%search-focus {
+  top: 0;
+
+  & > .input {
+    margin-right: 14.133%;
+  }
+
+  & > .cancel {
+    display: inline;
+  }
+}
+
+%search-for-navbar {
+  top: calc($navbar-height / $fs * 1em);
+}

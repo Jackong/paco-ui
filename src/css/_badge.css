@@ -1,0 +1,38 @@
+@import "_common.css";
+
+$fs: $text-3;
+
+%badge {
+  @mixin font-size $fs;
+
+  display: inline-block;
+  background-color: #f03642;
+  color: #fff;
+  text-align: center;
+}
+
+%badge-small {
+  width: calc(10em / $fs);
+  height: @width;
+  border-radius: calc(@height / 2);
+  line-height: @height;
+}
+
+%badge-flag {
+  width: auto;
+  height: calc(12em / $fs);
+  line-height: @height;
+  border-radius: @height;
+  padding: calc(6em / $fs) calc(4em / $fs);
+  color: $bgColor;
+  font-size: calc(8em / $fs);
+  display: inline-block;
+  text-align: center;
+}
+
+%badge-large {
+  width: calc(15em / $fs);
+  height: @width;
+  line-height: @height;
+  border-radius: calc(@height / 2);
+}

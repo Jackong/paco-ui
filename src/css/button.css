@@ -1,100 +1,25 @@
-@import "_common.css";
-
-$fs: $text-2;
-
-@define-mixin btn $bgColor, $textColor, $borderColor, $activeBgColor, $activeBorderColor {
-  background-color: $bgColor;
-  color: $textColor;
-  border: 1px solid $borderColor;
-
-  &:active,
-  &.active {
-    background-color: $activeBgColor;
-    border: 1px solid $activeBorderColor;
-  }
-}
+@import "_button.css";
 
 .btn {
-  @mixin font-size $fs;
-
-  height: em(45, $fs);
-  border-radius: em(4, $fs);
-  text-align: center;
-  width: 100%;
-  display: block;
-  user-select: none;
-  outline-style: none;
-  cursor: pointer;
-  padding: 0;
+  @extend %btn-common;
 
   &.primary {
-    @mixin btn $primaryColor, $reverseTextColor, $primaryBorderColor, $primaryActiveColor, $primaryActiveBorderColor;
-
-    width: 92%;
-    margin: 0 4%;
+    @extend %btn-primary;
   }
 
   &.secondary {
-    @mixin btn $secondaryColor, $textColor, $secondaryBorderColor, $secondaryActiveColor, $secondaryActiveBorderColor;
-    @mixin border 1px, $secondaryBorderColor, em(4, $fs);
-
-    &:active,
-    &.active {
-      @mixin border 1px, $secondaryActiveBorderColor, em(4, $fs);
-    }
-
-    width: 92%;
-    margin: 0 4%;
-  }
-
-  &.warning {
-    @mixin btn $bgColor, #f4333c, $secondaryBorderColor, $secondaryActiveColor, $secondaryActiveBorderColor;
-
-    &.disabled {
-      @mixin btn $bgColor, #d2d2d2, $secondaryBorderColor, $bgColor, $secondaryBorderColor;
-    }
-
-    border-radius: 0;
-  }
-
-  &.disabled {
-    @mixin btn $disabledColor, #d2d2d2, $disabledColor, $disabledColor, $disabledColor;
-
-    cursor: not-allowed;
+    @extend %btn-secondary;
   }
 
   &.outline {
-    @mixin btn $outlineBackgroundColor, $primaryColor, $primaryBorderColor, $secondaryActiveColor, $primaryActiveBorderColor;
-    @mixin font-size $text-4;
+    @extend %btn-outline;
+  }
 
-    height: em(30, $text-4);
-    line-height: @height;
-    border-radius: em(4, $text-4);
-    width: auto;
-    display: inline-block;
-    padding-left: em(13, $text-4);
-    padding-right: @padding-left;
+  &.warning {
+    @extend %btn-warning;
   }
 
   &.bottom {
-    @mixin btn $bgColor, $primaryColor, $secondaryBorderColor, $secondaryActiveColor, $secondaryActiveBorderColor;
-
-    height: em(55, $fs);
-    border-radius: 0;
-  }
-
-  &.warning,
-  &.warning:active,
-  &.warning.active,
-  &.bottom,
-  &.bottom:active,
-  &.bottom.active,
-  &.warning.disabled,
-  &.warning.disabled:active,
-  &.warning.disabled.active {
-    border: none;
-
-    @mixin border-top;
-    @mixin border-bottom;
+    @extend %btn-bottom;
   }
 }

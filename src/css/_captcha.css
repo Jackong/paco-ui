@@ -1,0 +1,25 @@
+@import "_common.css";
+
+%captcha {
+  color: $primaryColor;
+  padding-left: calc(17.5 / 15em);
+  height: calc(18 / 15em);
+  line-height: @height;
+  font-size: 1em;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0;
+  border-left: 1px solid $dividerColor;
+}
+
+%captcha-waiting {
+  color: #e6e6e6;
+  cursor: default;
+}
+
+%captcha-image {
+  vertical-align: middle;
+  margin-right: 0.3em;
+  height: 2em;
+  width: auto;
+}

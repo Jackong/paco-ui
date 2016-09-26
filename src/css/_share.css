@@ -1,0 +1,60 @@
+@import "_common.css";
+
+$fs: $text-6;
+
+%share {
+  @mixin font-size $fs;
+
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 999999;
+  width: 100%;
+  height: calc(195em / $fs);
+  display: flex;
+}
+
+@define-mixin share-channel $num {
+  margin-top: calc(35em / $fs);
+  font-size: 1em;
+  cursor: pointer;
+  width: calc(100% / $num);
+}
+
+%share-channel-bg {
+  font-size: 1em;
+  background-color: $bgColor;
+  width: calc(59em / $fs);
+  height: @width;
+  border-radius: calc(10em / $fs);
+  display: inline-block;
+  position: relative;
+}
+
+%share-channel-image {
+  font-size: 1em;
+  width: calc(40em / $fs);
+  height: @width;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+%share-channel-name {
+  font-size: 1em;
+  color: $textColor;
+  margin-top: calc(10em / $fs);
+}
+
+%share-cancel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-width: 0;
+  color: $titleColor;
+}

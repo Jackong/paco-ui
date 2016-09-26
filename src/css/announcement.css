@@ -1,63 +1,18 @@
-@import "_common.css";
-
-$fs: $text-5;
-$height: 36;
-
-.announcement-wrapper {
-  @mixin font-size $fs;
-
-  height: em($height, $fs);
-  display: block;
-
-  &.hide {
-    display: none;
-  }
-}
+@import "_announcement.css";
 
 .announcement {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  width: 100%;
-  height: em($height, $fs);
-  line-height: @height;
-  background-color: #fff391;
+  @extend %announcement;
 
   & > .message {
-    color: $annoColor;
-    padding-left: em(15, $fs);
-    padding-right: em(15, $fs);
-    text-align: left;
-    display: block;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    z-index: 999999;
-    font-size: 1em;
+    @extend %announcement-message;
   }
 
   & > .icon {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1000000;
-    color: $annoColor;
-    padding-left: em(15, $fs);
-    padding-right: @padding-left;
-    text-align: right;
-    display: inline;
-    user-select: none;
-    font-size: 0.8em;
-    font-weight: bolder;
-    cursor: pointer;
-
-    & + .message {
-      padding-right: em(30, $fs);
-    }
+    @extend %announcement-icon;
   }
 }
 
+.navbar-wrapper ~ .announcement,
 .navbar-wrapper ~ * .announcement {
-  top: em($navbar-height, $fs);
+  @extend %announcement-for-navbar;
 }

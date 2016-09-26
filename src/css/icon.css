@@ -1,15 +1,9 @@
-@import "_common.css";
+@import "_icon.css";
 
 .icon-wrapper {
-  font-size: 1em;
-  width: 1em;
-  height: @width;
-  line-height: @height;
-  color: $tipsColor;
-  cursor: pointer;
-  vertical-align: middle;
+  @extend %icon;
 
   &.highlight {
-    color: $primaryColor;
+    @extend %icon-highlight;
   }
 }

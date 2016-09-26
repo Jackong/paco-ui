@@ -1,0 +1,53 @@
+@import "_common.css";
+
+$fs: $text-4;
+
+%modal {
+  @mixin font-size $fs;
+
+  background-color: $bgColor;
+  position: fixed;
+  left: calc(30em / $fs);
+  right: calc(30em / $fs);
+  top: 22.2%;
+  margin: auto;
+  border-radius: calc(4em / $fs);
+  text-align: center;
+  z-index: 999999;
+}
+
+%modal-image {
+  margin-top: calc(30em / $fs);
+  width: calc(187em / $fs);
+  height: auto;
+  border-radius: @height;
+  user-select: none;
+  font-size: 1em;
+}
+
+%modal-desc {
+  font-size: 1em;
+  color: #aaa;
+  margin-top: calc(8em / $fs);
+
+  &:first-of-type {
+    margin-top: calc(20em / $fs);
+  }
+}
+
+%modal-btn {
+  margin: calc(20em / $text-2) auto calc(32em / $text-2) auto;
+}
+
+%modal-close {
+  font-size: 1em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: calc(19em / $fs);
+  height: @width;
+  color: #9a9a9a;
+  user-select: none;
+  padding: calc(15em / $fs);
+  cursor: pointer;
+}

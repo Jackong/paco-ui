@@ -1,0 +1,47 @@
+@import "_common.css";
+
+$fs: $text-5;
+
+%toast {
+  @mixin font-size $fs;
+
+  position: fixed;
+  opacity: 0.9;
+  width: calc(105em / $fs);
+  height: @width;
+  top: calc(225em / $fs);
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: calc(10em / $fs);
+  background-color: #1f2337;
+  z-index: 999999;
+}
+
+%toast-icon {
+  font-size: calc(41em / $fs);
+  color: $bgColor;
+  width: 1em;
+  height: @width;
+  line-height: @height;
+  position: absolute;
+  top: calc(17.5em / 41);
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+%toast-message {
+  color: $bgColor;
+  position: absolute;
+  text-align: center;
+  top: calc(70em / $fs);
+  left: calc(10em / $fs);
+  right: @left;
+  margin: auto;
+  line-height: 1.2;
+  font-size: 1em;
+}
+
+%toast-for-navbar {
+  top: calc((225 - $navbar-height) / $fs * 1em);
+}
