@@ -3,6 +3,10 @@
 .actionsheet {
   @extend %actionsheet;
 
+  &.hide {
+    @extend %hide;
+  }
+
   & > .tips {
     @extend %actionsheet-tips;
   }
