@@ -30,12 +30,17 @@ $fs: 22.5;
   }
 }
 
+%keyboard-key-disabled {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
 %keyboard-key {
   font-size: 1em;
   display: inline-block;
   background-color: #fff;
   box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.35);
-  width: calc(31em / $fs);
+  width: 8.266%; 
   height: calc(42em / $fs);
   border-radius: calc(3em / $fs);
   line-height: @height;
@@ -57,17 +62,16 @@ $fs: 22.5;
   }
 
   &:disabled {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    @extend %keyboard-key-disabled;
   }
 }
 
 %keyboard-upper {
-  width: calc(42em / $fs);
+  width: 11.2%; 
   margin-right: calc(14em / $fs);
 }
 
 %keyboard-delete {
-  width: calc(42em / $fs);
+  width: 11.2%;
   margin-left: calc(8em / $fs);
 }

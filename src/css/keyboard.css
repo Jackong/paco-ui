@@ -9,6 +9,10 @@
     & > .key {
       @extend %keyboard-key;
 
+      &.disabled {
+        @extend %keyboard-key-disabled;
+      }
+
       &.upper {
         @extend %keyboard-upper;
       }
