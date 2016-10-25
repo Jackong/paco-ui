@@ -1,0 +1,38 @@
+@import "_alert.css";
+@import "_picker.css";
+
+.picker {
+  @extend %picker;
+
+  & > .header {
+    @extend %picker-header;
+  }
+
+  & > .body {
+    @extend %picker-body;
+
+    & > .mirror {
+      @extend %picker-mirror;
+    }
+
+    & > .col {
+      @extend %picker-col;
+
+      & > .row {
+        @extend %picker-row;
+
+        &.selected {
+          @extend %picker-row-selected;
+        }
+      }
+    }
+  }
+  
+  & > .btn-group {
+    @extend %alert-btn-group;
+
+    & > .btn {
+      @extend %alert-2-btn;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+@import "_common.css";
+
+$fs: $text-3;
+
+%picker {
+  @mixin font-size $fs;
+  
+  border-radius: calc(10em / $fs);
+  overflow: hidden;
+  height: auto;
+  position: fixed;
+  top: 32%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 999999;
+  border: 1px solid #e5e5e5;
+  background-color: $bgColor;
+  width: 84%;
+  text-align: center;
+}
+
+%picker-header {
+  font-size: calc(17em / $fs);
+  color: $titleColor;
+  text-align: center;
+  margin-top: calc(20em / $fs);
+}
+
+%picker-body {
+  font-size: 1em;
+  margin-top: calc(20em / $fs);
+  margin-bottom: @margin-top;
+  width: 90%;
+  height: auto;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  background-color: rgba(247, 247, 247, 0.6);
+  overflow: hidden;
+
+  &::before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: -15px;
+    left: 0;
+    right: 0;
+    height: 15px;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 10px 15px #f7f7f7;
+  }
+
+  &::after {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+    height: 15px;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 -10px 15px #f7f7f7;
+  }
+}
+
+%picker-mirror {
+  background-color: $bgColor;
+  height: calc(100% / 3);
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+
+  &::before {
+    content: " ";
+    display: inline-block;
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: $linkColor;
+  }
+}
+
+%picker-col {
+  position: relative;
+  z-index: 1;
+  font-size: 1em;
+  width: calc(100% / 3);
+  height: calc(127em / $fs);
+  display: inline-block;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+ 
+%picker-row {
+  height: calc(100% / 3);
+  line-height: 2.8;
+  color: $descColor;
+}
+
+%picker-row-selected {
+  color: $linkColor;
+}
