@@ -1,1 +1,7 @@
 @import url(//o9s0jh825.qnssl.com/common/css/paco/font.min.css);
+html,
+body {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
