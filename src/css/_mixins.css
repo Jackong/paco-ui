@@ -41,34 +41,19 @@ $lg: 480px;
   }
 }
 
-@define-mixin border-line $where, $width: 1px, $color: $dividerColor {
-  content: '';
-  position: absolute;
-  background-color: $color;
-  $(where): 0;
-
-  @if $where == left || $where == right {
-    top: 0;
-    bottom: 0;
-    width: $width;
-    transform: scaleX(0.5);
-    transform-origin: center $where;
-  }
-
-  @else {
-    left: 0;
-    right: 0;
-    height: $width;
-    transform: scaleY(0.5);
-    transform-origin: $where center;
-  }
-}
-
 @define-mixin border-left $width: 1px, $color: $dividerColor {
   position: relative;
 
   &::before {
-    @mixin border-line left, $width, $color;
+    content: " ";
+    position: absolute;
+    background-color: $color;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: $width;
+    transform: scaleX(0.5);
+    transform-origin: center left;
   }
 }
 
@@ -76,7 +61,15 @@ $lg: 480px;
   position: relative;
 
   &::after {
-    @mixin border-line right, $width, $color;
+    content: " ";
+    position: absolute;
+    background-color: $color;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: $width;
+    transform: scaleX(0.5);
+    transform-origin: center right;
   }
 }
 
@@ -84,7 +77,15 @@ $lg: 480px;
   position: relative;
 
   &::before {
-    @mixin border-line top, $width, $color;
+    content: " ";
+    position: absolute;
+    background-color: $color;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: $width;
+    transform: scaleY(0.5);
+    transform-origin: top center;
   }
 }
 
@@ -92,6 +93,14 @@ $lg: 480px;
   position: relative;
 
   &::after {
-    @mixin border-line bottom, $width, $color;
+    content: " ";
+    position: absolute;
+    background-color: $color;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: $width;
+    transform: scaleY(0.5);
+    transform-origin: bottom center;
   }
 }

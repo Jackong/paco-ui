@@ -37,31 +37,32 @@ $fs: $text-3;
   position: relative;
   background-color: rgba(247, 247, 247, 0.6);
   overflow: hidden;
+  box-sizing: border-box;
 
   &::before {
     content: " ";
     display: inline-block;
     position: absolute;
-    top: -15px;
+    top: calc(-20em / $fs);
     left: 0;
     right: 0;
-    height: 15px;
+    height: calc(20em / $fs);
     z-index: 2;
     background-color: rgba(255, 255, 255, 0);
-    box-shadow: 0 10px 15px #f7f7f7;
+    box-shadow: 0 calc(15em / $fs) calc(20em / $fs) #f7f7f7;
   }
 
   &::after {
     content: " ";
     display: inline-block;
     position: absolute;
-    bottom: -15px;
+    bottom: calc(-20em / $fs);
     left: 0;
     right: 0;
-    height: 15px;
+    height: calc(20em / $fs);
     z-index: 2;
     background-color: rgba(255, 255, 255, 0);
-    box-shadow: 0 -10px 15px #f7f7f7;
+    box-shadow: 0 calc(-15em / $fs) calc(20em / $fs) #f7f7f7;
   }
 }
 
@@ -97,6 +98,7 @@ $fs: $text-3;
   height: calc(127em / $fs);
   display: inline-block;
   overflow-y: scroll;
+  float: left;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 
@@ -106,6 +108,8 @@ $fs: $text-3;
 }
 
 %picker-row {
+  @mixin border-left;
+
   height: calc(100% / 3);
   line-height: 2.8;
   color: $descColor;
