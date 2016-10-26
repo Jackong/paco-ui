@@ -1,4 +1,3 @@
-@import "_alert.css";
 @import "_picker.css";
 
 .picker {
@@ -27,12 +26,12 @@
       }
     }
   }
-  
+
   & > .btn-group {
-    @extend %alert-btn-group;
+    @extend %picker-btn-group;
 
     & > .btn {
-      @extend %alert-2-btn;
+      @extend %picker-btn;
     }
   }
 }

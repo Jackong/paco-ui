@@ -4,7 +4,7 @@ $fs: $text-3;
 
 %picker {
   @mixin font-size $fs;
-  
+
   border-radius: calc(10em / $fs);
   overflow: hidden;
   height: auto;
@@ -97,13 +97,14 @@ $fs: $text-3;
   height: calc(127em / $fs);
   display: inline-block;
   overflow-y: scroll;
+  scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 
   &::-webkit-scrollbar {
     display: none;
   }
 }
- 
+
 %picker-row {
   height: calc(100% / 3);
   line-height: 2.8;
@@ -112,4 +113,37 @@ $fs: $text-3;
 
 %picker-row-selected {
   color: $linkColor;
+}
+
+%picker-btn-group {
+  height: auto;
+  width: 100%;
+  font-size: calc(17em / $fs);
+  box-sizing: border-box;
+}
+
+%picker-btn {
+  @mixin border 1px, $dividerColor, 0;
+
+  float: left;
+  font-size: 1em;
+  margin: 0;
+  width: 50%;
+
+  &::before {
+    border-bottom-width: 0;
+    border-right-width: 0;
+  }
+
+  &:first-child {
+    color: $descColor;
+
+    &::before {
+      border-left-width: 0;
+    }
+  }
+
+  &:last-child {
+    color: $linkColor;
+  }
 }
