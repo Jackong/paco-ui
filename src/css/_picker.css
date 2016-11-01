@@ -6,7 +6,6 @@ $fs: $text-3;
   @mixin font-size $fs;
 
   border-radius: calc(10em / $fs);
-  overflow: hidden;
   height: auto;
   position: fixed;
   top: 32%;
