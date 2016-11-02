@@ -5,7 +5,22 @@
     <meta charset="utf-8"/>
     <title>IconFont</title>
     <link rel="stylesheet" href="demo.css">
-    <link rel="stylesheet" href="iconfont.css">
+    <script src="iconfont.js"></script>
+
+    <style type="text/css">
+        .icon {
+          /* 通过设置 font-size 来改变图标大小 */
+          width: 1em; height: 1em;
+          /* 图标和文字相邻时，垂直对齐 */
+          vertical-align: -0.15em;
+          /* 通过设置 color 来改变 SVG 的颜色/fill */
+          fill: currentColor;
+          /* path 和 stroke 溢出 viewBox 部分在 IE 下会显示
+             normalize.css 中也包含这行 */
+          overflow: hidden;
+        }
+
+    </style>
 </head>
 <body>
     <div class="main markdown">
@@ -13,583 +28,780 @@
         <ul class="icon_lists clear">
             
                 <li>
-                <i class="icon paco icon-help"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-help"></use>
+                    </svg>
                     <div class="name">帮助</div>
                     <div class="fontclass">.icon-help</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-car"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-car"></use>
+                    </svg>
                     <div class="name">绑定车牌</div>
                     <div class="fontclass">.icon-car</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-edit"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-edit"></use>
+                    </svg>
                     <div class="name">编辑</div>
                     <div class="fontclass">.icon-edit</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-map"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-map"></use>
+                    </svg>
                     <div class="name">地图</div>
                     <div class="fontclass">.icon-map</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-user-2"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-user-2"></use>
+                    </svg>
                     <div class="name">登录</div>
                     <div class="fontclass">.icon-user-2</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-qrcode"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qrcode"></use>
+                    </svg>
                     <div class="name">二维码</div>
                     <div class="fontclass">.icon-qrcode</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-back"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-back"></use>
+                    </svg>
                     <div class="name">返回</div>
                     <div class="fontclass">.icon-back</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-share"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-share"></use>
+                    </svg>
                     <div class="name">分享</div>
                     <div class="fontclass">.icon-share</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-more"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-more"></use>
+                    </svg>
                     <div class="name">更多</div>
                     <div class="fontclass">.icon-more</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-close"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-close"></use>
+                    </svg>
                     <div class="name">关闭</div>
                     <div class="fontclass">.icon-close</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-list-rectangle"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-list-rectangle"></use>
+                    </svg>
                     <div class="name">列表</div>
                     <div class="fontclass">.icon-list-rectangle</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-trash"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-trash"></use>
+                    </svg>
                     <div class="name">删除</div>
                     <div class="fontclass">.icon-trash</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-settings"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-settings"></use>
+                    </svg>
                     <div class="name">设置</div>
                     <div class="fontclass">.icon-settings</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-search"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-search"></use>
+                    </svg>
                     <div class="name">搜索</div>
                     <div class="fontclass">.icon-search</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-add"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-add"></use>
+                    </svg>
                     <div class="name">添加</div>
                     <div class="fontclass">.icon-add</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-contact"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-contact"></use>
+                    </svg>
                     <div class="name">通讯录</div>
                     <div class="fontclass">.icon-contact</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-avatar"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-avatar"></use>
+                    </svg>
                     <div class="name">头像</div>
                     <div class="fontclass">.icon-avatar</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-user"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-user"></use>
+                    </svg>
                     <div class="name">我的</div>
                     <div class="fontclass">.icon-user</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-circle"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-circle"></use>
+                    </svg>
                     <div class="name">未选中</div>
                     <div class="fontclass">.icon-circle</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-arrow-up"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-arrow-up"></use>
+                    </svg>
                     <div class="name">向上隐藏</div>
                     <div class="fontclass">.icon-arrow-up</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-arrow-down"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-arrow-down"></use>
+                    </svg>
                     <div class="name">向下展开</div>
                     <div class="fontclass">.icon-arrow-down</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-apply"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-apply"></use>
+                    </svg>
                     <div class="name">新车优惠－报名</div>
                     <div class="fontclass">.icon-apply</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-yuan"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-yuan"></use>
+                    </svg>
                     <div class="name">新车优惠－成交</div>
                     <div class="fontclass">.icon-yuan</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-location"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-location"></use>
+                    </svg>
                     <div class="name">新车优惠－到店</div>
                     <div class="fontclass">.icon-location</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-phone"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-phone"></use>
+                    </svg>
                     <div class="name">新车优惠－电话</div>
                     <div class="fontclass">.icon-phone</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-right"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-right"></use>
+                    </svg>
                     <div class="name">选中</div>
                     <div class="fontclass">.icon-right</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-home"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-home"></use>
+                    </svg>
                     <div class="name">主界面</div>
                     <div class="fontclass">.icon-home</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-info"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-info"></use>
+                    </svg>
                     <div class="name">信息</div>
                     <div class="fontclass">.icon-info</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-refresh"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-refresh"></use>
+                    </svg>
                     <div class="name">刷新</div>
                     <div class="fontclass">.icon-refresh</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-arrow-right"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-arrow-right"></use>
+                    </svg>
                     <div class="name">列表－进入</div>
                     <div class="fontclass">.icon-arrow-right</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-calc"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-calc"></use>
+                    </svg>
                     <div class="name">列表－计算器</div>
                     <div class="fontclass">.icon-calc</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-contacts"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-contacts"></use>
+                    </svg>
                     <div class="name">列表－电话簿</div>
                     <div class="fontclass">.icon-contacts</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-card"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-card"></use>
+                    </svg>
                     <div class="name">列表－卡券</div>
                     <div class="fontclass">.icon-card</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-camera"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-camera"></use>
+                    </svg>
                     <div class="name">列表－相机</div>
                     <div class="fontclass">.icon-camera</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-checking"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-checking"></use>
+                    </svg>
                     <div class="name">列表－检查</div>
                     <div class="fontclass">.icon-checking</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-wrong"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-wrong"></use>
+                    </svg>
                     <div class="name">列表－删除内容</div>
                     <div class="fontclass">.icon-wrong</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-info1"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-info1"></use>
+                    </svg>
                     <div class="name">提示</div>
                     <div class="fontclass">.icon-info1</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-right-o"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-right-o"></use>
+                    </svg>
                     <div class="name">成功提醒</div>
                     <div class="fontclass">.icon-right-o</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-wrong-o"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-wrong-o"></use>
+                    </svg>
                     <div class="name">失败提醒</div>
                     <div class="fontclass">.icon-wrong-o</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-opps"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-opps"></use>
+                    </svg>
                     <div class="name">网络无法连接</div>
                     <div class="fontclass">.icon-opps</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-monitor"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-monitor"></use>
+                    </svg>
                     <div class="name">优惠券－显示器</div>
                     <div class="fontclass">.icon-monitor</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-package"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-package"></use>
+                    </svg>
                     <div class="name">优惠券－礼包</div>
                     <div class="fontclass">.icon-package</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-gift"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-gift"></use>
+                    </svg>
                     <div class="name">优惠券－礼品</div>
                     <div class="fontclass">.icon-gift</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-umbrella"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-umbrella"></use>
+                    </svg>
                     <div class="name">安全分析</div>
                     <div class="fontclass">.icon-umbrella</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-menu"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-menu"></use>
+                    </svg>
                     <div class="name">菜单数据分析</div>
                     <div class="fontclass">.icon-menu</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-bill"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-bill"></use>
+                    </svg>
                     <div class="name">内容数据分析</div>
                     <div class="fontclass">.icon-bill</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-analysis"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-analysis"></use>
+                    </svg>
                     <div class="name">圈子数据分析</div>
                     <div class="fontclass">.icon-analysis</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-vote"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-vote"></use>
+                    </svg>
                     <div class="name">投票</div>
                     <div class="fontclass">.icon-vote</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-bell"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-bell"></use>
+                    </svg>
                     <div class="name">推送管理</div>
                     <div class="fontclass">.icon-bell</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-user-i"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-user-i"></use>
+                    </svg>
                     <div class="name">用户状况</div>
                     <div class="fontclass">.icon-user-i</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-content"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-content"></use>
+                    </svg>
                     <div class="name">运营内容编辑</div>
                     <div class="fontclass">.icon-content</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-list-dot"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-list-dot"></use>
+                    </svg>
                     <div class="name">自定义菜档</div>
                     <div class="fontclass">.icon-list-dot</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-reply-auto"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-reply-auto"></use>
+                    </svg>
                     <div class="name">自动回复设置</div>
                     <div class="fontclass">.icon-reply-auto</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-like-s"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-like-s"></use>
+                    </svg>
                     <div class="name">点赞</div>
                     <div class="fontclass">.icon-like-s</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-gas"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-gas"></use>
+                    </svg>
                     <div class="name">钱包_支付_余额不足_订单</div>
                     <div class="fontclass">.icon-gas</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-wechat-pay"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-wechat-pay"></use>
+                    </svg>
                     <div class="name">钱包_支付_余额不足_微信</div>
                     <div class="fontclass">.icon-wechat-pay</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-money"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-money"></use>
+                    </svg>
                     <div class="name">钱包_支付_余额不足_余额</div>
                     <div class="fontclass">.icon-money</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-alipay"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-alipay"></use>
+                    </svg>
                     <div class="name">钱包_支付_余额不足_支付宝</div>
                     <div class="fontclass">.icon-alipay</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-success"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-success"></use>
+                    </svg>
                     <div class="name">验证成功</div>
                     <div class="fontclass">.icon-success</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-tips"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-tips"></use>
+                    </svg>
                     <div class="name">提示内容</div>
                     <div class="fontclass">.icon-tips</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-failure"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-failure"></use>
+                    </svg>
                     <div class="name">支付失败</div>
                     <div class="fontclass">.icon-failure</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-waiting"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-waiting"></use>
+                    </svg>
                     <div class="name">等待处理</div>
                     <div class="fontclass">.icon-waiting</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-warning"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-warning"></use>
+                    </svg>
                     <div class="name">警示提醒</div>
                     <div class="fontclass">.icon-warning</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-like"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-like"></use>
+                    </svg>
                     <div class="name">没有违章</div>
                     <div class="fontclass">.icon-like</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-upper"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-upper"></use>
+                    </svg>
                     <div class="name">键盘切换大小写</div>
                     <div class="fontclass">.icon-upper</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-delete"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-delete"></use>
+                    </svg>
                     <div class="name">键盘删除</div>
                     <div class="fontclass">.icon-delete</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-4s-shop"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-4s-shop"></use>
+                    </svg>
                     <div class="name">服务_4S店</div>
                     <div class="fontclass">.icon-4s-shop</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-service"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-service"></use>
+                    </svg>
                     <div class="name">服务_客服</div>
                     <div class="fontclass">.icon-service</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-avatar-s"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-avatar-s"></use>
+                    </svg>
                     <div class="name">服务_默认头像</div>
                     <div class="fontclass">.icon-avatar-s</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-promo"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-promo"></use>
+                    </svg>
                     <div class="name">服务_惠</div>
                     <div class="fontclass">.icon-promo</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-store"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-store"></use>
+                    </svg>
                     <div class="name">服务_门店</div>
                     <div class="fontclass">.icon-store</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-telephone-s"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-telephone-s"></use>
+                    </svg>
                     <div class="name">服务_电话2</div>
                     <div class="fontclass">.icon-telephone-s</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-image"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-image"></use>
+                    </svg>
                     <div class="name">服务_默认图片</div>
                     <div class="fontclass">.icon-image</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-telephone-h"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-telephone-h"></use>
+                    </svg>
                     <div class="name">服务_电话3</div>
                     <div class="fontclass">.icon-telephone-h</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-quick-repair"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-quick-repair"></use>
+                    </svg>
                     <div class="name">服务_快修</div>
                     <div class="fontclass">.icon-quick-repair</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-clock"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-clock"></use>
+                    </svg>
                     <div class="name">服务_时间</div>
                     <div class="fontclass">.icon-clock</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-camera-p"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-camera-p"></use>
+                    </svg>
                     <div class="name">服务_相机-点亮</div>
                     <div class="fontclass">.icon-camera-p</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-parking"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-parking"></use>
+                    </svg>
                     <div class="name">服务_停车场</div>
                     <div class="fontclass">.icon-parking</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-camera-p-o"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-camera-p-o"></use>
+                    </svg>
                     <div class="name">服务_相机-未点亮</div>
                     <div class="fontclass">.icon-camera-p-o</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-sofa"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-sofa"></use>
+                    </svg>
                     <div class="name">服务_休息</div>
                     <div class="fontclass">.icon-sofa</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-calendar"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-calendar"></use>
+                    </svg>
                     <div class="name">服务_选择日期</div>
                     <div class="fontclass">.icon-calendar</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-drinks"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-drinks"></use>
+                    </svg>
                     <div class="name">服务_饮品</div>
                     <div class="fontclass">.icon-drinks</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-repair"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-repair"></use>
+                    </svg>
                     <div class="name">服务_修理</div>
                     <div class="fontclass">.icon-repair</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-gps"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-gps"></use>
+                    </svg>
                     <div class="name">服务_GPS信号</div>
                     <div class="fontclass">.icon-gps</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-im"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-im"></use>
+                    </svg>
                     <div class="name">服务_IM</div>
                     <div class="fontclass">.icon-im</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-info-o"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-info-o"></use>
+                    </svg>
                     <div class="name">服务_INF</div>
                     <div class="fontclass">.icon-info-o</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-coupon"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-coupon"></use>
+                    </svg>
                     <div class="name">服务_券</div>
                     <div class="fontclass">.icon-coupon</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-star-h"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-star-h"></use>
+                    </svg>
                     <div class="name">服务_未评价</div>
                     <div class="fontclass">.icon-star-h</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-heart-h"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-heart-h"></use>
+                    </svg>
                     <div class="name">服务_未收藏</div>
                     <div class="fontclass">.icon-heart-h</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-star-s"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-star-s"></use>
+                    </svg>
                     <div class="name">服务_已评价</div>
                     <div class="fontclass">.icon-star-s</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-heart"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-heart"></use>
+                    </svg>
                     <div class="name">服务_已收藏</div>
                     <div class="fontclass">.icon-heart</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-wifi"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-wifi"></use>
+                    </svg>
                     <div class="name">服务_WiFi</div>
                     <div class="fontclass">.icon-wifi</div>
                 </li>
             
                 <li>
-                <i class="icon paco icon-money-s"></i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-money-s"></use>
+                    </svg>
                     <div class="name">钱包_充值_钱符号</div>
                     <div class="fontclass">.icon-money-s</div>
                 </li>
             
         </ul>
 
-        <h2 id="font-class-">font-class引用</h2>
+
+        <h2 id="symbol-">symbol引用</h2>
         <hr>
 
-        <p>font-class是unicode使用方式的一种变种，主要是解决unicode书写不直观，语意不明确的问题。</p>
-        <p>与unicode使用方式相比，具有如下特点：</p>
+        <p>这是一种全新的使用方式，应该说这才是未来的主流，也是平台目前推荐的用法。相关介绍可以参考这篇<a href="">文章</a>
+        这种用法其实是做了一个svg的集合，与另外两种相比具有如下特点：</p>
         <ul>
-        <li>兼容性良好，支持ie8+，及所有现代浏览器。</li>
-        <li>相比于unicode语意明确，书写更直观。可以很容易分辨这个icon是什么。</li>
-        <li>因为使用class来定义图标，所以当要替换图标时，只需要修改class里面的unicode引用。</li>
-        <li>不过因为本质上还是使用的字体，所以多色图标还是不支持的。</li>
+          <li>支持多色图标了，不再受单色限制。</li>
+          <li>通过一些技巧，支持像字体那样，通过<code>font-size</code>,<code>color</code>来调整样式。</li>
+          <li>兼容性较差，支持 ie9+,及现代浏览器。</li>
+          <li>浏览器渲染svg的性能一般，还不如png。</li>
         </ul>
         <p>使用步骤如下：</p>
-        <h3 id="-fontclass-">第一步：引入项目下面生成的fontclass代码：</h3>
-
-
-        <pre><code class="lang-js hljs javascript"><span class="hljs-comment">&lt;link rel="stylesheet" type="text/css" href="./iconfont.css"&gt;</span></code></pre>
-        <h3 id="-">第二步：挑选相应图标并获取类名，应用于页面：</h3>
-        <pre><code class="lang-css hljs">&lt;<span class="hljs-selector-tag">i</span> <span class="hljs-selector-tag">class</span>="<span class="hljs-selector-tag">iconfont</span> <span class="hljs-selector-tag">icon-xxx</span>"&gt;&lt;/<span class="hljs-selector-tag">i</span>&gt;</code></pre>
+        <h3 id="-symbol-">第一步：引入项目下面生成的symbol代码：</h3>
+        <pre><code class="lang-js hljs javascript"><span class="hljs-comment">&lt;script src="./iconfont.js"&gt;&lt;/script&gt;</span></code></pre>
+        <h3 id="-css-">第二步：加入通用css代码（引入一次就行）：</h3>
+        <pre><code class="lang-js hljs javascript">&lt;style type=<span class="hljs-string">"text/css"</span>&gt;
+.icon {
+   width: <span class="hljs-number">1</span>em; height: <span class="hljs-number">1</span>em;
+   vertical-align: <span class="hljs-number">-0.15</span>em;
+   fill: currentColor;
+   overflow: hidden;
+}
+&lt;<span class="hljs-regexp">/style&gt;</span></code></pre>
+        <h3 id="-">第三步：挑选相应图标并获取类名，应用于页面：</h3>
+        <pre><code class="lang-js hljs javascript">&lt;svg <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"icon"</span> aria-hidden=<span class="hljs-string">"true"</span>&gt;<span class="xml"><span class="hljs-tag">
+  &lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#icon-xxx"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
+</span>&lt;<span class="hljs-regexp">/svg&gt;
+        </span></code></pre>
         <blockquote>
         <p>实际情况中"iconfont"（font-family）需要修改为你项目下的font-family。可以通过编辑项目查看，默认是"iconfont"。</p>
         </blockquote>
