@@ -92,7 +92,6 @@ $fs: $text-3;
   position: relative;
   z-index: 1;
   font-size: 1em;
-  width: calc(100% / 3);
   height: calc(127em / $fs);
   display: inline-block;
   overflow-y: scroll;
@@ -103,6 +102,10 @@ $fs: $text-3;
   &::-webkit-scrollbar {
     display: none;
   }
+}
+
+@define-mixin picker-n-col $n {
+  width: calc(100% / $n);
 }
 
 %picker-row {

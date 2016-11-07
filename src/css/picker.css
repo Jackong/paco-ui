@@ -17,12 +17,32 @@
     & > .col {
       @extend %picker-col;
 
+      @mixin picker-n-col 3;
+
       & > .row {
         @extend %picker-row;
 
         &.selected {
           @extend %picker-row-selected;
         }
+      }
+    }
+
+    &.col-1 {
+      & > .col {
+        @mixin picker-n-col 1;
+      }
+    }
+
+    &.col-2 {
+      & > .col {
+        @mixin picker-n-col 2;
+      }
+    }
+
+    &.col-3 {
+      & > .col {
+        @mixin picker-n-col 3;
       }
     }
   }
