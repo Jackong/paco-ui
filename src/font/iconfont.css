@@ -1,10 +1,10 @@
 
 @font-face {font-family: "paco";
-  src: url('iconfont.eot?t=1478746949462'); /* IE9*/
-  src: url('iconfont.eot?t=1478746949462#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1478746949462') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1478746949462') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1478746949462#paco') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1480925321203'); /* IE9*/
+  src: url('iconfont.eot?t=1480925321203#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1480925321203') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1480925321203') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1480925321203#paco') format('svg'); /* iOS 4.1- */
 }
 
 .paco {
@@ -215,4 +215,38 @@
 .icon-car-wash:before { content: "\e75b"; }
 
 .icon-calendar-m:before { content: "\e75d"; }
+
+.icon-tag:before { content: "\e763"; }
+
+.icon-record:before { content: "\e764"; }
+
+.icon-tank-e:before { content: "\e765"; }
+
+.icon-location-c:before { content: "\e766"; }
+
+.icon-add-o:before { content: "\e767"; }
+
+.icon-loop:before { content: "\e768"; }
+
+.icon-link:before { content: "\e769"; }
+
+.icon-flag:before { content: "\e76a"; }
+
+.icon-add-b:before { content: "\e76b"; }
+
+.icon-disconnection:before { content: "\e76c"; }
+
+.icon-info-list:before { content: "\e76d"; }
+
+.icon-trash-car:before { content: "\e76f"; }
+
+.icon-valuation:before { content: "\e770"; }
+
+.icon-plate:before { content: "\e771"; }
+
+.icon-money-e:before { content: "\e772"; }
+
+.icon-query:before { content: "\e76e"; }
+
+.icon-query-x:before { content: "\e773"; }
 
