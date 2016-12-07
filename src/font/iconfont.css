@@ -1,10 +1,10 @@
 
 @font-face {font-family: "paco";
-  src: url('iconfont.eot?t=1480925321203'); /* IE9*/
-  src: url('iconfont.eot?t=1480925321203#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1480925321203') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1480925321203') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1480925321203#paco') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1481089293385'); /* IE9*/
+  src: url('iconfont.eot?t=1481089293385#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1481089293385') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1481089293385') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1481089293385#paco') format('svg'); /* iOS 4.1- */
 }
 
 .paco {
@@ -249,4 +249,16 @@
 .icon-query:before { content: "\e76e"; }
 
 .icon-query-x:before { content: "\e773"; }
+
+.icon-play:before { content: "\e774"; }
+
+.icon-hot:before { content: "\e775"; }
+
+.icon-comment:before { content: "\e776"; }
+
+.icon-new:before { content: "\e777"; }
+
+.icon-eye:before { content: "\e778"; }
+
+.icon-inspection:before { content: "\e779"; }
 
