@@ -6,7 +6,7 @@ $descColor: #a5a5a5;
 $textColor: #666;
 $titleColor: #333;
 $inputColor: $titleColor;
-$tabColor: $titleColor;
+$tabColor: $textColor;
 $reverseTextColor: #fff;
 $reverseTitleColor: #fff;
 $disabledColor: #e8e8f0;
