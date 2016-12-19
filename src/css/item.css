@@ -59,3 +59,15 @@
     }
   }
 }
+
+.item-letter {
+  @extend %item-letter;
+}
+
+.quick {
+  @extend %quick;
+
+  & > .letter {
+    @extend %quick-letter;
+  }
+}
