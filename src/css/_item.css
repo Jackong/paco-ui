@@ -112,3 +112,24 @@ $fs: $text-3;
   left: calc(-8em / $fs);
   top: @left;
 }
+
+%item-letter {
+  color: $titleColor;
+  font-size: calc(14em / $fs);
+  margin-left: calc(15em / $text-5);
+}
+
+%quick {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+%quick-letter {
+  padding-left: calc(6em / $text-6);
+  padding-right: @padding-left;
+  font-size: calc($text-6 / $fs * 1em);
+  line-height: 1.5;
+  color: $primaryColor;
+}
